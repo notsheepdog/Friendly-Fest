@@ -32,15 +32,7 @@ public class CompareSignatures : MonoBehaviour
         outputComparison = tex.GetPixels32();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Compare();
-        }
-    }
-
-    void Compare()
+    public int Compare()
     {
         //makes an array of 125 000 pixels to represent the user's signature
         Texture2D tex = new Texture2D(250, 125, TextureFormat.RGB24, true);
@@ -58,21 +50,28 @@ public class CompareSignatures : MonoBehaviour
 
         playerComparisonOutput = tex.GetPixels32();
 
-        Debug.Log("player length: " + playerComparisonOutput.Length);
-        Debug.Log("comp length: " + outputComparison.Length);
-
-        //checks on each pixel if the user's signature's pixel's color matches that of the original signature
-        int score = 0;
+        //calculates score based on:
+        // (player's pixels that overlap correct pixels)
+        // out of
+        // (overlapping pixels + player's added pixels that dont overlap + correct signature pixels that the player didnt add)
+        float hit = 0;
+        float miss = 0;
         for (var i = 0; i < playerComparisonOutput.Length; i++)
         {
-            if (playerComparisonOutput[i].r == outputComparison[i].r)
+            if (playerComparisonOutput[i] == Color.black || outputComparison[i] == Color.black)
             {
-                score++;
+                if (playerComparisonOutput[i].r == outputComparison[i].r)
+                {
+                    hit++;
+                }
+                else
+                {
+                    miss++;
+                }
             }
 
         }
 
-        Debug.Log(Mathf.CeilToInt((score / (float) playerComparisonOutput.Length) * 100) + "%");
-        
+        return Mathf.CeilToInt(hit / (hit + miss) * 100);
     }
 }
