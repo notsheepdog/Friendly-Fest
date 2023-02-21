@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
   m_Name: NewWorkieDialogue
   m_EditorClassIdentifier: 
-  name: 
-  sentences: []
+  name: Workie
+  sentences:
+  - "I am a worikie\t"
+  - I like to work
+  - boooooo
+  - AHHHHHHH
