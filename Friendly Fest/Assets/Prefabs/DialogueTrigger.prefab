@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interaction: 32
-  interactText: {fileID: 3192300872781510487, guid: bf18cc22428b746f7a87772ba7a76e7f, type: 3}
+  interactText: {fileID: 1085173269782787533, guid: bf18cc22428b746f7a87772ba7a76e7f, type: 3}
   _dialogue: {fileID: 11400000, guid: a1e3fd21fd0b040e98e04b5416e57479, type: 2}
   _dialogueManager: {fileID: 0}
 --- !u!135 &2809790388503812706

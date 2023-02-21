@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: 6cc08d0a58c7a894d940437145ceaba9
+  - enabled: 1
+    path: Assets/Scenes/BossRoom.unity
+    guid: 4151094bc5055f547b55b67d16f42d58
+  - enabled: 1
+    path: Assets/Scenes/SigningMinigame.unity
+    guid: 65570b4126477b243813cd0279a456c2
   m_configObjects: {}

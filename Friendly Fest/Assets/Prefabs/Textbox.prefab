@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2721008627708276723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -87,6 +87,10 @@ PrefabInstance:
     - target: {fileID: 2135025606006492207, guid: ce8043e8489224c4da3eb8660736811d, type: 3}
       propertyPath: m_Name
       value: DialogueText
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062562909602250973, guid: ce8043e8489224c4da3eb8660736811d, type: 3}
+      propertyPath: m_Text
+      value: This is dialogue....
       objectReference: {fileID: 0}
     - target: {fileID: 5097465527004818403, guid: ce8043e8489224c4da3eb8660736811d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -273,6 +277,10 @@ PrefabInstance:
     - target: {fileID: 2516385071785269912, guid: c4e25f15c3d7042a9b3a2fa797acc2c1, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078095148711744433, guid: c4e25f15c3d7042a9b3a2fa797acc2c1, type: 3}
+      propertyPath: m_Text
+      value: Name Here
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4e25f15c3d7042a9b3a2fa797acc2c1, type: 3}
