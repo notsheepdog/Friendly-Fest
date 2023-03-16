@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4466014, g: 0.4964398, b: 0.5748312, a: 1}
+  m_IndirectSpecularColor: {r: 0.44660097, g: 0.49643928, b: 0.57482994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1068,22 +1068,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1144552921}
     m_Modifications:
-    - target: {fileID: 2809790388503812706, guid: f37b4bf1a45a24c8da9d1485ee6ee53f, type: 3}
-      propertyPath: m_Radius
-      value: 3.0712392
-      objectReference: {fileID: 0}
-    - target: {fileID: 2809790388503812706, guid: f37b4bf1a45a24c8da9d1485ee6ee53f, type: 3}
-      propertyPath: m_Center.x
-      value: -0.024411557
-      objectReference: {fileID: 0}
-    - target: {fileID: 2809790388503812706, guid: f37b4bf1a45a24c8da9d1485ee6ee53f, type: 3}
-      propertyPath: m_Center.y
-      value: 2.4409137
-      objectReference: {fileID: 0}
-    - target: {fileID: 2809790388503812706, guid: f37b4bf1a45a24c8da9d1485ee6ee53f, type: 3}
-      propertyPath: m_Center.z
-      value: -0.15473428
-      objectReference: {fileID: 0}
     - target: {fileID: 3878203905205551226, guid: f37b4bf1a45a24c8da9d1485ee6ee53f, type: 3}
       propertyPath: m_Name
       value: DialogueTrigger
