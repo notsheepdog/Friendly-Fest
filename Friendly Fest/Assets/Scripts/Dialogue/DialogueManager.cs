@@ -26,6 +26,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueSO dialogue)
     {
+        Debug.Log("starting");
+        Debug.Log(dialogue.name);
 
         this.sentences.Clear();
         this._textBox.SetActive(true);

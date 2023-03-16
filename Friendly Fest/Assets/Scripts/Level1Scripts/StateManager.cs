@@ -22,17 +22,14 @@ public class StateManager : MonoBehaviour
         }
         else if(!sequenceRunning)
         {
-            Debug.Log("perpertually idle");
-            bossAnimator.SetInteger("State", 0);
+            bossAnimator.SetInteger("StateManager", 0);
         }
     }
 
     private IEnumerator runWinSequence()
     {
         yield return new WaitForSeconds(3);
-        Debug.Log("running boss animation");
-        bossAnimator.SetInteger("State", 1);
-        Debug.Log("completing signing");
+        bossAnimator.SetInteger("StateManager", 1);
         this.manager.StartDialogue(signingCompleted);
         yield return new WaitForSeconds(1);
         sequenceRunning = false;
