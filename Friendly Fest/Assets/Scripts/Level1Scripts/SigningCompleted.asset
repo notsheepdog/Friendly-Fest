@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
-  m_Name: NewWorkieDialogue
+  m_Name: SigningCompleted
   m_EditorClassIdentifier: 
-  name: Workie
+  name: Boss
   sentences:
-  - "I am a worikie\t"
-  - I like to work
-  - boooooo
-  - AHHHHHHH
+  - Hmmmm.... yes very good.
+  - With this sophisticated document signed you are all set to run your booth
+  - Go enjoy the festival. I must continue to do my job . . . work

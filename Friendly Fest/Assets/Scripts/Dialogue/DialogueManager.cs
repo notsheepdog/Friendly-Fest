@@ -31,7 +31,6 @@ public class DialogueManager : MonoBehaviour
         this._textBox.SetActive(true);
         foreach (var sentence in dialogue.Sentences)
         {
-            Debug.Log(sentence);
             this.sentences.Enqueue(sentence);
         }
 
