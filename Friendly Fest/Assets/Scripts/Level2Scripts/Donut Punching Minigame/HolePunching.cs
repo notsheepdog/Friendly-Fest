@@ -8,6 +8,8 @@ public class HolePunching : MonoBehaviour
 
     public Transform donut;
     public Transform hole;
+    public AudioClip winSFX;
+    public AudioClip failSFX;
 
     [Tooltip("how many units the hole can validly be from the center of the donut")]
     public int distanceAllowance;
@@ -29,6 +31,7 @@ public class HolePunching : MonoBehaviour
 
             if (Vector3.Distance(hole.localPosition, dPos) < distanceAllowance)
             {
+                AudioSource.PlayClipAtPoint(winSFX, Camera.main.transform.position);
                 donut.GetComponent<DonutMove>().moving = false;
                 moving = false;
 
@@ -36,6 +39,7 @@ public class HolePunching : MonoBehaviour
             }
             else
             {
+                AudioSource.PlayClipAtPoint(failSFX, Camera.main.transform.position);
                 donut.GetComponent<DonutMove>().moving = false;
                 moving = false;
 
