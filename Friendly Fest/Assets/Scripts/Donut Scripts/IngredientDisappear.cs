@@ -11,6 +11,7 @@ public class IngredientDisappear : MonoBehaviour
     public static bool sprinkles = true;
     public Button cab;
     public Button sprink;
+    public AudioClip itemSFX;
 
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class IngredientDisappear : MonoBehaviour
 
     public void IngredientClicked()
     {
+        AudioSource.PlayClipAtPoint(itemSFX, Camera.main.transform.position);
         ingredientsFound++;
         gameObject.SetActive(false);
     }
