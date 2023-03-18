@@ -1372,6 +1372,7 @@ MonoBehaviour:
   clear: {fileID: 2080721211}
   submit: {fileID: 1783098048}
   winSFX: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
+  retrySFX: {fileID: 8300000, guid: 72127805eb2bc4e7fbf2e02eca266cfa, type: 3}
   results: {fileID: 1125391818}
   level1State: {fileID: 11400000, guid: 06b926d6c3d8a684ab82cacd46be6303, type: 2}
 --- !u!114 &1656664294

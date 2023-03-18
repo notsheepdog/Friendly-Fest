@@ -10,6 +10,7 @@ public class SigningGame_UIManager : MonoBehaviour
     public Button clear;
     public Button submit;
     public AudioClip winSFX;
+    public AudioClip retrySFX;
 
     // for TMPro
     public TextMeshProUGUI results;
@@ -53,6 +54,7 @@ public class SigningGame_UIManager : MonoBehaviour
         }
         else
         {
+            AudioSource.PlayClipAtPoint(retrySFX, Camera.main.transform.position);
             results.text = "let's give that another try!";
 
             level1State.paperSigned = false;
