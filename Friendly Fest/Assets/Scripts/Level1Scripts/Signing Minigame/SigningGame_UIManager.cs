@@ -9,6 +9,8 @@ public class SigningGame_UIManager : MonoBehaviour
     public Transform drawingBoard;
     public Button clear;
     public Button submit;
+    public AudioClip winSFX;
+    public AudioClip retrySFX;
 
     // for TMPro
     public TextMeshProUGUI results;
@@ -35,6 +37,7 @@ public class SigningGame_UIManager : MonoBehaviour
 
         if (score >= 18)
         {
+            AudioSource.PlayClipAtPoint(winSFX, Camera.main.transform.position);
             results.text = "Wow that looks spot on!";
 
             level1State.paperSigned = true;
@@ -51,6 +54,7 @@ public class SigningGame_UIManager : MonoBehaviour
         }
         else
         {
+            AudioSource.PlayClipAtPoint(retrySFX, Camera.main.transform.position);
             results.text = "let's give that another try!";
 
             level1State.paperSigned = false;
