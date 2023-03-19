@@ -11,6 +11,11 @@ public class StateManager : MonoBehaviour
     private bool completed = false;
     private bool sequenceRunning = false;
 
+    void Start()
+    {
+        manager = FindObjectOfType<DialogueManager>();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -18,7 +23,7 @@ public class StateManager : MonoBehaviour
         {
             completed = true;
             sequenceRunning = true;
-            StartCoroutine(runWinSequence());
+            runWinSequence();
         }
         else if(!sequenceRunning)
         {
@@ -26,12 +31,10 @@ public class StateManager : MonoBehaviour
         }
     }
 
-    private IEnumerator runWinSequence()
+    private void runWinSequence()
     {
-        yield return new WaitForSeconds(3);
         bossAnimator.SetInteger("StateManager", 1);
         this.manager.StartDialogue(signingCompleted);
-        yield return new WaitForSeconds(1);
         sequenceRunning = false;
     }
 }

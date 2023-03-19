@@ -6,6 +6,7 @@ using TMPro;
 public class IngredientGameManager : MonoBehaviour
 {
     public TextMeshProUGUI counter;
+    public Level2SO levelTwoState;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class IngredientGameManager : MonoBehaviour
         if (IngredientDisappear.ingredientsFound == IngredientDisappear.totalIngredients)
         {
             //level manager call
+            levelTwoState.ingreadientsFound = true;
             GameObject.FindObjectOfType<LevelManager>().MoveToNextScene();
         }
     }

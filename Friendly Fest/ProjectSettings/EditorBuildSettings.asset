@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SigningMinigame.unity
     guid: 65570b4126477b243813cd0279a456c2
+  - enabled: 1
+    path: Assets/Scenes/BoothArea.unity
+    guid: 72358ad8b9b94ff42bfa95bcecd9cb1d
+  - enabled: 1
+    path: Assets/Scenes/IngredientMiniGame.unity
+    guid: 0f1f90c6997ec0f4dbbea95785ade9c2
+  - enabled: 1
+    path: Assets/Scenes/DonutPunchMinigame.unity
+    guid: 344b4689aa3c7454c9a89a52e3cd8fee
   m_configObjects: {}

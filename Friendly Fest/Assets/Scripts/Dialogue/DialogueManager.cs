@@ -19,7 +19,6 @@ public class DialogueManager : MonoBehaviour
 
         this.sentences = new Queue<string>();
         this._name = "";
-        this.gameObject.SetActive(false);
 
     }
 

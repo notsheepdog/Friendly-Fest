@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
+  m_Name: StartLevel2
+  m_EditorClassIdentifier: 
+  name: Voice of the Developers
+  sentences:
+  - With the permit settled Min now has to help his family to prep making donuts
+  - (the developers are still working on narratively what they want the player to
+    do to get to this point)
+  - However we have the fun minigames and central hub laid out
+  - 'Please go to your familys booth to search for ingredients to make your donuts! '
+  - '(Hint: its the one with the chimney behind it)'

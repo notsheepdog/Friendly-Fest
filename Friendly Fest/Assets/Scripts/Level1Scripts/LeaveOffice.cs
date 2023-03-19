@@ -6,17 +6,6 @@ public class LeaveOffice : MonoBehaviour
 {
     public Level1 scriptableObj;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void MoveSceneIfPaperSigned()
     {
@@ -30,6 +19,7 @@ public class LeaveOffice : MonoBehaviour
     {
         if (scriptableObj.paperSigned)
         {
+            FindObjectOfType<LevelManager>().nextScene = 3;
             FindObjectOfType<LevelManager>().MoveToNextScene();
         }
     }

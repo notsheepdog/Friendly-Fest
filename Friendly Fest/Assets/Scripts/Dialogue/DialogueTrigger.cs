@@ -13,6 +13,11 @@ public class DialogueTrigger : MonoBehaviour
 
     private bool _playerInRange;
 
+    void Start()
+    {
+        _dialogueManager = FindObjectOfType<DialogueManager>();
+    }
+
     public void Update()
     {
         if (this._playerInRange)

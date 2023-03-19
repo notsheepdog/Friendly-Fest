@@ -8,6 +8,7 @@ public class DonutPunching_Manager : MonoBehaviour
     public HolePunching holePunchingController;
     public Transform levelMarkerParent;
     public Transform donutsParent;
+    public Level2SO levelTwoState;
 
     private Transform[] donuts;
     private Image[] levelMarkers;
@@ -52,6 +53,7 @@ public class DonutPunching_Manager : MonoBehaviour
         if (currentLevel == levelMarkers.Length)
         {
             // successfully finish minigame
+            levelTwoState.donutsCreated = true;
         }
         else
         {
