@@ -14,6 +14,16 @@ public class StateManager : MonoBehaviour
     void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
+        if (levelOneState.paperSigned)
+        {
+            GameObject.FindGameObjectWithTag("toSign").SetActive(false);
+            GameObject.FindGameObjectWithTag("toHome").SetActive(true);
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("toSign").SetActive(true);
+            GameObject.FindGameObjectWithTag("toHome").SetActive(false);
+        }
     }
 
     // Update is called once per frame

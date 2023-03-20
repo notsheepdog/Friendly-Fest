@@ -54,6 +54,7 @@ public class DonutPunching_Manager : MonoBehaviour
         {
             // successfully finish minigame
             levelTwoState.donutsCreated = true;
+            FindObjectOfType<LevelManager>().MoveToNextScene();
         }
         else
         {

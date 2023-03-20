@@ -16,16 +16,17 @@ public class Level2StateManager : MonoBehaviour
         if (levelTwoState.ingreadientsFound && levelTwoState.donutsCreated)
         {
             runEpilogueDialogue();
-            FindObjectOfType<LevelManager>().nextScene = 5;
+            FindObjectOfType<LevelManager>().gameObject.SetActive(false);
+
         } else if (levelTwoState.ingreadientsFound)
         {
             runMinigame3Guide();
-            FindObjectOfType<LevelManager>().nextScene = 4;
+            FindObjectOfType<LevelManager>().nextScene = 5;
         }
         else
         {
             runMinigame2Guide();
-            FindObjectOfType<LevelManager>().gameObject.SetActive(false);
+            FindObjectOfType<LevelManager>().nextScene = 4;    
         }
     }
 
