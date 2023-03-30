@@ -6,11 +6,12 @@ public class NPCState : MonoBehaviour
 {
     public enum State
     {
-        Idle, Looking, Talking
+        Idle, Walking, Looking, Talking
     }
 
     public float speed = 5;
     public float rotationSpeed = 10;
+    public float idleTime = 3;
     public float lookDistance = 3;
     public float wanderPointDistance = 1;
     public Vector3[] wanderPoints = { new Vector3(0,0,0) };
@@ -22,6 +23,7 @@ public class NPCState : MonoBehaviour
     float distanceToPlayer;
     int curWanderPointIdx = 0;
     Vector3 curWanderPoint;
+    float idleTimeElapsed = 0;
 
     void Start()
     {
@@ -40,6 +42,9 @@ public class NPCState : MonoBehaviour
             case State.Idle:
                 UpdateIdle();
                 break;
+            case State.Walking:
+                UpdateWalking();
+                break;
             case State.Looking:
                 UpdateLooking();
                 break;
@@ -50,6 +55,24 @@ public class NPCState : MonoBehaviour
     }
 
     void UpdateIdle()
+    {
+        idleTimeElapsed += Time.deltaTime;
+
+        if (distanceToPlayer <= lookDistance)
+        {
+            currentState = State.Looking;
+        }
+        else if (idleTimeElapsed >= idleTime)
+        {
+            currentState = State.Walking;
+        }
+        else
+        {
+            // idle animation
+        }
+    }
+
+    void UpdateWalking()
     {
         if (distanceToPlayer <= lookDistance)
         {
@@ -63,7 +86,7 @@ public class NPCState : MonoBehaviour
             curWanderPoint = wanderPoints[curWanderPointIdx];
         }
 
-        // there will be an animation
+        // walking animation
         FaceTarget(curWanderPoint);
         transform.position = Vector3.MoveTowards(transform.position, curWanderPoint, speed * Time.deltaTime);
     }
@@ -79,7 +102,17 @@ public class NPCState : MonoBehaviour
 
     void UpdateTalking()
     {
-        // there will be an animation
+        // dialogue animation
+    }
+
+    public void DialogueEnter()
+    {
+        currentState = State.Talking;
+    }
+
+    public void DialogueExit()
+    {
+        currentState = State.Looking;
     }
 
     void FaceTarget(Vector3 target)
