@@ -9,16 +9,21 @@ public class NPCState : MonoBehaviour
         Idle, Walking, Looking, Talking
     }
 
+    // parameters
     public float speed = 5;
     public float rotationSpeed = 10;
     public float idleTime = 3;
-    public float lookDistance = 3;
+    public float lookDistance = 5;
     public float wanderPointDistance = 1;
-    public Vector3[] wanderPoints = { new Vector3(0,0,0) };
+    // wander points are added in the inspector.
+    // if no wander points are added in inspector, the NPC's starting position will be added as a wander point.
+    public Vector3[] wanderPoints;
 
+    // game objects and components
     Animator anim;
     GameObject player;
 
+    // internal variables
     State currentState;
     float distanceToPlayer;
     int curWanderPointIdx = 0;
@@ -30,6 +35,10 @@ public class NPCState : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         currentState = State.Idle;
+        if (wanderPoints.Length == 0)
+        {
+            wanderPoints = new Vector3[] { transform.position };
+        }
         curWanderPoint = wanderPoints[curWanderPointIdx];
     }
 
@@ -54,6 +63,7 @@ public class NPCState : MonoBehaviour
         }
     }
 
+    // idle NPCs are waiting until they go to their next wander point
     void UpdateIdle()
     {
         idleTimeElapsed += Time.deltaTime;
@@ -72,6 +82,7 @@ public class NPCState : MonoBehaviour
         }
     }
 
+    // walking NPCs are moving towards their next wander point
     void UpdateWalking()
     {
         if (distanceToPlayer <= lookDistance)
@@ -91,6 +102,7 @@ public class NPCState : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, curWanderPoint, speed * Time.deltaTime);
     }
 
+    // looking NPCs are looking at the player and stopped
     void UpdateLooking()
     {
         if (distanceToPlayer > lookDistance)
@@ -100,6 +112,7 @@ public class NPCState : MonoBehaviour
         FaceTarget(player.transform.position);
     }
 
+    // talking NPCs are engaged in dialogue
     void UpdateTalking()
     {
         // dialogue animation
