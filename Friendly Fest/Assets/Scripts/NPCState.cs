@@ -75,6 +75,8 @@ public class NPCState : MonoBehaviour
         else if (idleTimeElapsed >= idleTime)
         {
             currentState = State.Walking;
+            curWanderPointIdx = (curWanderPointIdx + 1) % wanderPoints.Length;
+            curWanderPoint = wanderPoints[curWanderPointIdx];
         }
         else
         {
@@ -88,18 +90,17 @@ public class NPCState : MonoBehaviour
         if (distanceToPlayer <= lookDistance)
         {
             currentState = State.Looking;
-            return;
         }
-
-        if (Vector3.Distance(transform.position, curWanderPoint) >= wanderPointDistance)
+        else if (Vector3.Distance(transform.position, curWanderPoint) <= wanderPointDistance)
         {
-            curWanderPointIdx = (curWanderPointIdx + 1) % wanderPoints.Length;
-            curWanderPoint = wanderPoints[curWanderPointIdx];
+            IdleEnter();
         }
-
-        // walking animation
-        FaceTarget(curWanderPoint);
-        transform.position = Vector3.MoveTowards(transform.position, curWanderPoint, speed * Time.deltaTime);
+        else
+        {
+            // walking animation
+            FaceTarget(curWanderPoint);
+            transform.position = Vector3.MoveTowards(transform.position, curWanderPoint, speed * Time.deltaTime);
+        }
     }
 
     // looking NPCs are looking at the player and stopped
@@ -107,7 +108,7 @@ public class NPCState : MonoBehaviour
     {
         if (distanceToPlayer > lookDistance)
         {
-            currentState = State.Idle;
+            IdleEnter();
         }
         FaceTarget(player.transform.position);
     }
@@ -126,6 +127,12 @@ public class NPCState : MonoBehaviour
     public void DialogueExit()
     {
         currentState = State.Looking;
+    }
+
+    void IdleEnter()
+    {
+        currentState = State.Idle;
+        idleTimeElapsed = 0f;
     }
 
     void FaceTarget(Vector3 target)
