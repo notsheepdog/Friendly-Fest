@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2926049382441780220}
+  - component: {fileID: 1033896923796103178}
   m_Layer: 0
   m_Name: Workie
   m_TagString: Untagged
@@ -49,6 +50,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1033896923796103178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757841770541124878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6b0369f384c874dbddb5876b0c6af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 10
+  idleTime: 3
+  lookDistance: 5
+  wanderPointDistance: 1
+  wanderPoints: []
 --- !u!1 &840738156700863366
 GameObject:
   m_ObjectHideFlags: 0
