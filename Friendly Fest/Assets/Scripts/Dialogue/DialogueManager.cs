@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Text _dialogue_text;
     public Text _name_text;
     public GameObject _textBox;
+    public AudioClip _dialogueSFX;
     public KeyCode interact;
 
     private DialogueTrigger currentTrigger;
@@ -49,6 +50,8 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        AudioSource.PlayClipAtPoint(_dialogueSFX, Camera.main.transform.position);
+
         Debug.Log("next sentence");
         if (sentences.Count == 0)
         {

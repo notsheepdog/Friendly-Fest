@@ -1661,6 +1661,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 386287188}
     - target: {fileID: 6031491537717984451, guid: a0d23fba30d0d462399367d2b193cecc, type: 3}
+      propertyPath: _dialogueSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: d5d89f02d3001ad4ba3e123cf24e917b, type: 3}
+    - target: {fileID: 6031491537717984451, guid: a0d23fba30d0d462399367d2b193cecc, type: 3}
       propertyPath: _dialogue_text
       value: 
       objectReference: {fileID: 187566034}
@@ -2240,6 +2244,10 @@ PrefabInstance:
       propertyPath: nextScene
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4042650916287248890, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
+      propertyPath: sceneChangeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b9b6a75ae36fc54caefdb12b0755d5a, type: 3}
     - target: {fileID: 7687912688734668831, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -3156,9 +3164,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1273827107051785856, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273827107051785856, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4028545101861359792, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723334, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_CollisionDetection
@@ -3207,6 +3223,14 @@ PrefabInstance:
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323359968277723340, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: walkSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 41c9eb9196ea9324b82bf7390fb2f4cb, type: 3}
+    - target: {fileID: 4323359968277723340, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: soundCooldownMax
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723343, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_Name
