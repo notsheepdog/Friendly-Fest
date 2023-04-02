@@ -12,14 +12,21 @@ public class DialogueManager : MonoBehaviour
     public GameObject _textBox;
     public KeyCode interact;
 
+    private DialogueTrigger currentTrigger;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
         this.sentences = new Queue<string>();
         this._name = "";
 
+    }
+    
+    // used if the gameObject that triggered the dialogue needs to know when the dialogue ends
+    public void SetTrigger(DialogueTrigger trigger)
+    {
+        currentTrigger = trigger;
     }
 
 
@@ -56,6 +63,11 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        if (currentTrigger != null)
+        {
+            currentTrigger.EndDialogue();
+            currentTrigger = null;
+        }
         this._textBox.SetActive(false);
     }
 }
