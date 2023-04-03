@@ -21,10 +21,4 @@ public class ResetSOs : MonoBehaviour
             gameStart = false;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

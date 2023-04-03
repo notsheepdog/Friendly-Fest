@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public KeyCode interaction;
     public GameObject interactText;
-    [SerializeField] private DialogueSO _dialogue;
+    public DialogueSO _dialogue;
     [SerializeField] private DialogueManager _dialogueManager;
 
     private bool _playerInRange;

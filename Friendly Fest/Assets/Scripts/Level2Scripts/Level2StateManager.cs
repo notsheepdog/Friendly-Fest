@@ -9,24 +9,31 @@ public class Level2StateManager : MonoBehaviour
     public DialogueSO donutsPrompt;
     public DialogueSO epilogue;
     [SerializeField] private DialogueManager manager;
+    private DisplayQuests displayer;
+
+    public Task returnIngredients;
+    public Task finishedDonuts;
 
     void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
+        displayer = FindObjectOfType<DisplayQuests>();
+
         if (levelTwoState.ingreadientsFound && levelTwoState.donutsCreated)
         {
             runEpilogueDialogue();
-            FindObjectOfType<LevelManager>().gameObject.SetActive(false);
+            displayer.curTask = finishedDonuts;
+            displayer.displayCurrentTask();
 
         } else if (levelTwoState.ingreadientsFound)
         {
             runMinigame3Guide();
-            FindObjectOfType<LevelManager>().nextScene = 5;
+            displayer.curTask = returnIngredients;
+            displayer.displayCurrentTask();
         }
         else
         {
             runMinigame2Guide();
-            FindObjectOfType<LevelManager>().nextScene = 4;    
         }
     }
 

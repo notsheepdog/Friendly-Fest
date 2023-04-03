@@ -5,25 +5,34 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     [SerializeField] private Level1 levelOneState;
+    public DialogueSO welcome;
     public DialogueSO signingCompleted;
     public Animator bossAnimator;
     [SerializeField] private DialogueManager manager;
     private bool completed = false;
     private bool sequenceRunning = false;
+    private DisplayQuests displayer;
+
+    public Task signPaper;
+    public Task returnSignage;
+
 
     void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
+        displayer = FindObjectOfType<DisplayQuests>();
+
         if (levelOneState.paperSigned)
         {
-            GameObject.FindGameObjectWithTag("toSign").SetActive(false);
-            GameObject.FindGameObjectWithTag("toHome").SetActive(true);
-        }
-        else
+            displayer.curTask = returnSignage;
+            displayer.displayCurrentTask();
+        } else if (!levelOneState.paperSigned)
         {
-            GameObject.FindGameObjectWithTag("toSign").SetActive(true);
-            GameObject.FindGameObjectWithTag("toHome").SetActive(false);
+            this.manager.StartDialogue(welcome);
+            displayer.curTask = signPaper;
+            displayer.displayCurrentTask();
         }
+
     }
 
     // Update is called once per frame
