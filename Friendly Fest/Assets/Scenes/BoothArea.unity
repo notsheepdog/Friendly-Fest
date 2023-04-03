@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+
   m_IndirectSpecularColor: {r: 0.7203969, g: 0.800563, b: 0.7821956, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -3301,8 +3302,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.35063648
+  m_Center: {x: 0.053374723, y: 6.988208e-11, z: -0.42408895}
 --- !u!23 &489707971
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4422,7 +4423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd01a770c7176f1428de15d43511a7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 4
+  nextScene: 0
+  exclamation: {fileID: 1129177487}
+  interaction: 32
 --- !u!4 &650898704
 Transform:
   m_ObjectHideFlags: 0
@@ -4431,7 +4434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650898702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.994688, y: 1.76, z: 70.21}
+  m_LocalPosition: {x: 8.9, y: 1.76, z: 78.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7266,6 +7269,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723340, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: walkSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 41c9eb9196ea9324b82bf7390fb2f4cb, type: 3}
+    - target: {fileID: 4323359968277723340, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: playerModel
       value: 
       objectReference: {fileID: 1238540838}
@@ -7327,6 +7334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+--- !u!1 &1129177487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8341994261623669106, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+  m_PrefabInstance: {fileID: 1129177486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1158648507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9028,6 +9040,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2054803644}
     - target: {fileID: 6031491537717984451, guid: a0d23fba30d0d462399367d2b193cecc, type: 3}
+      propertyPath: _dialogueSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: d5d89f02d3001ad4ba3e123cf24e917b, type: 3}
+    - target: {fileID: 6031491537717984451, guid: a0d23fba30d0d462399367d2b193cecc, type: 3}
       propertyPath: _dialogue_text
       value: 
       objectReference: {fileID: 1107639187}
@@ -10670,10 +10686,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelTwoState: {fileID: 11400000, guid: 3a1d991ab59de4e03a7b27062e52251e, type: 2}
-  ingredientsPrompt: {fileID: 11400000, guid: ade38abd8243f43f5bfe721263f6b772, type: 2}
-  donutsPrompt: {fileID: 11400000, guid: 8bf2eaf19bbd64dff9900454dc9ccdc9, type: 2}
+  ingredientsPrompt: {fileID: 11400000, guid: cc76e8da125014a0183b5bcdc6fb5f1b, type: 2}
+  donutsPrompt: {fileID: 11400000, guid: 7b4dcccd67be54d7f8633947a0a1c7ad, type: 2}
   epilogue: {fileID: 11400000, guid: b9682db7e63394efb8ab7672860da03a, type: 2}
-  manager: {fileID: 0}
+  manager: {fileID: 1433353986}
+  returnIngredients: {fileID: 11400000, guid: 4121b5419d89d450c915259ef6fe89b4, type: 2}
+  finishedDonuts: {fileID: 11400000, guid: 5582549ffc2b4402d9025e799f969b6a, type: 2}
 --- !u!4 &1726399819
 Transform:
   m_ObjectHideFlags: 0

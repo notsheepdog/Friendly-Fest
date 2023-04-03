@@ -5,11 +5,14 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     // used for rotating model based on movement direction
-    public Transform playerModel; 
+    public Transform playerModel;
+    public AudioClip walkSFX;
 
     private CharacterController controller;
     public float speed = 10f;
 
+    public float soundCooldownMax = 0.2f;
+    private float soundCooldown = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,10 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (soundCooldown >= 0)
+        {
+            soundCooldown -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
@@ -37,6 +43,12 @@ public class MovementController : MonoBehaviour
     private void MoveCharacter(Vector3 direction)
     {
         controller.Move(direction * speed * Time.deltaTime);
+
+        if (direction != Vector3.zero && soundCooldown <= 0)
+        {
+            AudioSource.PlayClipAtPoint(walkSFX, transform.position, 20);
+            soundCooldown = soundCooldownMax;
+        }
     }
 
     // rotates player model

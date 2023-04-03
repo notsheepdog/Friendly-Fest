@@ -13,7 +13,7 @@ public class NPCState : MonoBehaviour
     public float speed = 5;
     public float rotationSpeed = 10;
     public float idleTime = 3;
-    public float lookDistance = 5;
+    public float lookDistance = 8;
     public float wanderPointDistance = 1;
     // wander points are added in the inspector.
     // if no wander points are added in inspector, the NPC's starting position will be added as a wander point.
@@ -80,7 +80,7 @@ public class NPCState : MonoBehaviour
         }
         else
         {
-            // idle animation
+            anim.SetInteger("animState", 1);
         }
     }
 
@@ -111,12 +111,13 @@ public class NPCState : MonoBehaviour
             IdleEnter();
         }
         FaceTarget(player.transform.position);
+        anim.SetInteger("animState", 1);
     }
 
     // talking NPCs are engaged in dialogue
     void UpdateTalking()
     {
-        // dialogue animation
+        anim.SetInteger("animState", 2);
     }
 
     public void DialogueEnter()
