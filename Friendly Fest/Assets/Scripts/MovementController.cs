@@ -31,7 +31,7 @@ public class MovementController : MonoBehaviour
         Vector3 moveVector = transform.forward * verticalMove + transform.right * horizontalMove;
 
         MoveCharacter(moveVector);
-        RotateCharacter(moveVector);
+//        RotateCharacter(moveVector);
     }
 
     private void MoveCharacter(Vector3 direction)
