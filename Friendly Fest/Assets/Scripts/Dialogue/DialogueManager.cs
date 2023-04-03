@@ -25,6 +25,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueSO dialogue)
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Debug.Log("starting");
         Debug.Log(dialogue.name);
 
@@ -56,6 +58,8 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         this._textBox.SetActive(false);
     }
 }
