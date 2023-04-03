@@ -10,16 +10,24 @@ public class DialogueManager : MonoBehaviour
     public Text _dialogue_text;
     public Text _name_text;
     public GameObject _textBox;
+    public AudioClip _dialogueSFX;
     public KeyCode interact;
+
+    private DialogueTrigger currentTrigger;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
         this.sentences = new Queue<string>();
         this._name = "";
 
+    }
+    
+    // used if the gameObject that triggered the dialogue needs to know when the dialogue ends
+    public void SetTrigger(DialogueTrigger trigger)
+    {
+        currentTrigger = trigger;
     }
 
 
@@ -42,6 +50,8 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        AudioSource.PlayClipAtPoint(_dialogueSFX, Camera.main.transform.position);
+
         Debug.Log("next sentence");
         if (sentences.Count == 0)
         {
@@ -56,6 +66,11 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        if (currentTrigger != null)
+        {
+            currentTrigger.EndDialogue();
+            currentTrigger = null;
+        }
         this._textBox.SetActive(false);
     }
 }
