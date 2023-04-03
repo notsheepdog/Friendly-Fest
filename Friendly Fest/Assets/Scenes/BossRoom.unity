@@ -722,8 +722,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4042650916287248890, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
       propertyPath: nextScene
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4042650916287248890, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
+      propertyPath: exclamation
+      value: 
+      objectReference: {fileID: 1351701830}
     - target: {fileID: 7687912688734668831, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
       propertyPath: m_Name
       value: ToBooths
@@ -2044,9 +2048,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOneState: {fileID: 11400000, guid: 06b926d6c3d8a684ab82cacd46be6303, type: 2}
-  signingCompleted: {fileID: 11400000, guid: 27be58174d50b4eee8afaf3b51d70751, type: 2}
+  welcome: {fileID: 11400000, guid: f2a54fcd0790bdd4f9b5b4c4d57a615d, type: 2}
+  signingCompleted: {fileID: 11400000, guid: eb85decf896a0904389239f47076fe33, type: 2}
   bossAnimator: {fileID: 1706299691}
-  manager: {fileID: 0}
+  manager: {fileID: 190173222}
+  signPaper: {fileID: 11400000, guid: cc421c1194e084cf3908bed900edcb30, type: 2}
+  returnSignage: {fileID: 11400000, guid: 78f8d07d4b7df45418cc9c3903ffef0a, type: 2}
 --- !u!4 &837750094
 Transform:
   m_ObjectHideFlags: 0
@@ -3452,6 +3459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+--- !u!1 &1351701830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8341994261623669106, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+  m_PrefabInstance: {fileID: 1351701829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1352072667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5058,8 +5070,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4042650916287248890, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
       propertyPath: nextScene
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4042650916287248890, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
+      propertyPath: exclamation
+      value: 
+      objectReference: {fileID: 1351701830}
     - target: {fileID: 7687912688734668831, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
       propertyPath: m_Name
       value: SigningMinigame
