@@ -39,14 +39,10 @@ public class DialogueTrigger : MonoBehaviour
             this._dialogueManager.SetTrigger(this);
 
             // quick fix (can be changed later) to update workie animations
-            try
+            if (transform.parent != null && transform.parent.GetComponent<NPCState>() != null)
             {
-                if(transform.parent != null)
-                {
-                    transform.parent.gameObject.SendMessage("DialogueEnter");
-                }
+                transform.parent.GetComponent<NPCState>().DialogueEnter();
             }
-            catch { }
         }
 
     }
@@ -54,14 +50,10 @@ public class DialogueTrigger : MonoBehaviour
     public void EndDialogue()
     {
         // quick fix (can be changed later) to update workie animations
-        try
+        if (transform.parent != null && transform.parent.GetComponent<NPCState>() != null)
         {
-            if(transform.parent != null)
-            {
-                transform.parent.gameObject.SendMessage("DialogueExit");
-            }
+            transform.parent.GetComponent<NPCState>().DialogueExit();
         }
-        catch { }
     }
 
     private void OnTriggerEnter(Collider other)
