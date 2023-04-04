@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &397689581
 Canvas:
   m_ObjectHideFlags: 0
@@ -1369,6 +1369,7 @@ GameObject:
   - component: {fileID: 1656664291}
   - component: {fileID: 1656664293}
   - component: {fileID: 1656664294}
+  - component: {fileID: 1656664295}
   m_Layer: 0
   m_Name: Master
   m_TagString: Untagged
@@ -1441,6 +1442,18 @@ MonoBehaviour:
   nextScene: 2
   exclamation: {fileID: 578556473}
   interaction: 0
+--- !u!114 &1656664295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656664290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a093f71cb71034340b2c44d94d90d6ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1671728156
 GameObject:
   m_ObjectHideFlags: 0

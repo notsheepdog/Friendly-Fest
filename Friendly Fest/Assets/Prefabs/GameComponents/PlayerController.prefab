@@ -230,7 +230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerModel: {fileID: 8703641531429455690}
+  walkSFX: {fileID: 8300000, guid: 41c9eb9196ea9324b82bf7390fb2f4cb, type: 3}
   speed: 10
+  soundCooldownMax: 0.2
 --- !u!54 &4323359968277723334
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -708,6 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4323359968277723343}
+  mouseSensitivity: 100
 --- !u!224 &9118585254982059224 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5004642705507988477, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
