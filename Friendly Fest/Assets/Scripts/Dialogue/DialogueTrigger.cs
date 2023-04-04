@@ -39,10 +39,14 @@ public class DialogueTrigger : MonoBehaviour
             this._dialogueManager.SetTrigger(this);
 
             // quick fix (can be changed later) to update workie animations
-            if (transform.parent != null)
+            try
             {
-                transform.parent.gameObject.SendMessage("DialogueEnter");
+                if(transform.parent != null)
+                {
+                    transform.parent.gameObject.SendMessage("DialogueEnter");
+                }
             }
+            catch { }
         }
 
     }
@@ -50,10 +54,14 @@ public class DialogueTrigger : MonoBehaviour
     public void EndDialogue()
     {
         // quick fix (can be changed later) to update workie animations
-        if (transform.parent != null)
+        try
         {
-            transform.parent.gameObject.SendMessage("DialogueExit");
+            if(transform.parent != null)
+            {
+                transform.parent.gameObject.SendMessage("DialogueExit");
+            }
         }
+        catch { }
     }
 
     private void OnTriggerEnter(Collider other)
