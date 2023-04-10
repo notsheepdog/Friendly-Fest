@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    private Queue<string> sentences;
+    public Queue<string> sentences;
     private string _name;
+
     public Text _dialogue_text;
     public Text _name_text;
-    public GameObject _textBox;
-    public AudioClip _dialogueSFX;
-    public KeyCode interact;
 
-    private DialogueTrigger currentTrigger;
+    public GameObject _textBox;
+
+    public KeyCode interact;
 
 
     // Start is called before the first frame update
@@ -23,20 +23,18 @@ public class DialogueManager : MonoBehaviour
         this._name = "";
 
     }
-    
-    // used if the gameObject that triggered the dialogue needs to know when the dialogue ends
-    public void SetTrigger(DialogueTrigger trigger)
+
+    void Update()
     {
-        currentTrigger = trigger;
+        if (Input.GetKeyDown(interact))
+        {
+            this.DisplayNextSentence();
+        }
     }
 
 
     public void StartDialogue(DialogueSO dialogue)
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        Debug.Log("starting");
-        Debug.Log(dialogue.name);
 
         this.sentences.Clear();
         this._textBox.SetActive(true);
@@ -46,15 +44,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         this._name = dialogue.Name;
-        DisplayNextSentence();
-
     }
 
     public void DisplayNextSentence()
     {
-        AudioSource.PlayClipAtPoint(_dialogueSFX, Camera.main.transform.position);
 
-        Debug.Log("next sentence");
         if (sentences.Count == 0)
         {
             Debug.Log("ending the dialogue");
@@ -68,13 +62,6 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        if (currentTrigger != null)
-        {
-            currentTrigger.EndDialogue();
-            currentTrigger = null;
-        }
         this._textBox.SetActive(false);
     }
 }
