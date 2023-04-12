@@ -9,9 +9,9 @@ public class DialogueTrigger : MonoBehaviour
     public KeyCode interaction;
     public GameObject interactText;
     public DialogueSO _dialogue;
-    [SerializeField] private DialogueManager _dialogueManager;
+    [SerializeField] protected DialogueManager _dialogueManager;
 
-    private bool _playerInRange;
+    protected bool _playerInRange;
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
 
-    public void TriggerDialogue()
+    public virtual void TriggerDialogue()
     {
         if (this._playerInRange)
         {
@@ -44,7 +44,6 @@ public class DialogueTrigger : MonoBehaviour
                 transform.parent.GetComponent<NPCState>().DialogueEnter();
             }
         }
-
     }
 
     public void EndDialogue()
@@ -56,7 +55,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -66,7 +65,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {

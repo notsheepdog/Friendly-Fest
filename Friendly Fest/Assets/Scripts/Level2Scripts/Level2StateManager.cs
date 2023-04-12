@@ -14,6 +14,8 @@ public class Level2StateManager : MonoBehaviour
     public Task returnIngredients;
     public Task finishedDonuts;
 
+    public bool[] items = { false, false, false };
+
     void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
@@ -35,6 +37,23 @@ public class Level2StateManager : MonoBehaviour
         {
             runMinigame2Guide();
         }
+    }
+
+    public bool itemActive(int idx)
+    {
+        if (idx == 0)
+        {
+            return levelTwoState.donutsCreated && !items[idx];
+        }
+        else
+        {
+            return levelTwoState.donutsCreated && items[idx - 1] && !items[idx];
+        }
+    }
+
+    public void getItem(int idx)
+    {
+        items[idx] = true;
     }
 
 
