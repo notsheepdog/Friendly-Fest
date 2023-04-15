@@ -10833,10 +10833,12 @@ MonoBehaviour:
   levelTwoState: {fileID: 11400000, guid: 3a1d991ab59de4e03a7b27062e52251e, type: 2}
   ingredientsPrompt: {fileID: 11400000, guid: cc76e8da125014a0183b5bcdc6fb5f1b, type: 2}
   donutsPrompt: {fileID: 11400000, guid: 7b4dcccd67be54d7f8633947a0a1c7ad, type: 2}
+  tradingPrompt: {fileID: 11400000, guid: b9e42884e9c4ccf428d57fc775077528, type: 2}
   epilogue: {fileID: 11400000, guid: b9682db7e63394efb8ab7672860da03a, type: 2}
   manager: {fileID: 1433353986}
   returnIngredients: {fileID: 11400000, guid: 4121b5419d89d450c915259ef6fe89b4, type: 2}
   finishedDonuts: {fileID: 11400000, guid: 5582549ffc2b4402d9025e799f969b6a, type: 2}
+  tradeItems: {fileID: 11400000, guid: dd0acfc389772a74a92900f94f337305, type: 2}
   items: 000000
 --- !u!4 &1726399819
 Transform:

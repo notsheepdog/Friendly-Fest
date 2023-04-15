@@ -15,8 +15,11 @@ public class ResetSOs : MonoBehaviour
         if (gameStart)
         {
             lv1.paperSigned = false;
+            lv2.papersReturned = false;
             lv2.ingreadientsFound = false;
+            lv2.ingredientsReturned = false;
             lv2.donutsCreated = false;
+            lv2.itemsTraded = false;
             //level3 stuffs here if applicable...
             gameStart = false;
         }
