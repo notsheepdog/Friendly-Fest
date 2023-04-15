@@ -16,7 +16,9 @@ public class LobbyStateHandler : MonoBehaviour
         displayer = GameObject.FindObjectOfType<DisplayQuests>();
         if (!visited)
         {
-            GameObject.FindObjectOfType<DialogueManager>().StartDialogue(introDialogue);
+            DialogueManager dm = GameObject.FindObjectOfType<DialogueManager>();
+            dm.StartDialogue(introDialogue);
+            dm.DisplayNextSentence();
             visited = true;
             displayer.curTask = newTask;
             displayer.displayCurrentTask();

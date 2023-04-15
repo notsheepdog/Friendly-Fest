@@ -7,7 +7,6 @@ public class DialogueTrigger : MonoBehaviour
 {
 
     public KeyCode interaction;
-    public GameObject interactText;
     public DialogueSO _dialogue;
     [SerializeField] protected DialogueManager _dialogueManager;
 
@@ -35,32 +34,21 @@ public class DialogueTrigger : MonoBehaviour
         if (this._playerInRange)
         {
             this._playerInRange = false;
-            this._dialogueManager.StartDialogue(this._dialogue);
-            this._dialogueManager.SetTrigger(this);
-
-            // quick fix (can be changed later) to update workie animations
-            if (transform.parent != null && transform.parent.GetComponent<NPCState>() != null)
+            if(this._dialogueManager.sentences.Count == 0)
             {
-                transform.parent.GetComponent<NPCState>().DialogueEnter();
+                Debug.Log("starting a new dialogue");
+                this._dialogueManager.StartDialogue(this._dialogue);
             }
+
         }
     }
 
-    public void EndDialogue()
-    {
-        // quick fix (can be changed later) to update workie animations
-        if (transform.parent != null && transform.parent.GetComponent<NPCState>() != null)
-        {
-            transform.parent.GetComponent<NPCState>().DialogueExit();
-        }
-    }
 
     protected void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("interaction zone inside");
-            this.interactText.SetActive(true);
             this._playerInRange = true;
         }
     }
@@ -70,7 +58,6 @@ public class DialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Interaction zone outside");
-            this.interactText.SetActive(false);
             this._playerInRange = false;
         }
     }

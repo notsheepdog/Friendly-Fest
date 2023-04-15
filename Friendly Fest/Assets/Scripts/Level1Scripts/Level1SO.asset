@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ae0c89964fb9548824864ad963070e, type: 3}
   m_Name: Level1SO
   m_EditorClassIdentifier: 
-  paperSigned: 1
+  paperSigned: 0

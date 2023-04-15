@@ -13,6 +13,9 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PersistentSaveData.UpdateTaskData();
+        PersistentSaveData.UpdateSceneData();
+
         this.exclamation.SetActive(false);
     }
 

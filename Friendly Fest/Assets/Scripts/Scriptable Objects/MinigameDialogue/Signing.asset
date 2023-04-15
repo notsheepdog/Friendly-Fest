@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
-  m_Name: DonutContext
+  m_Name: Signing
   m_EditorClassIdentifier: 
-  name: Mom
+  name: Boss
   sentences:
-  - Now that everything is all gathered, I'll make the dough.
-  - How about you help me shape the doughnuts?
-  - I know that's your favorite part!
-  - I'm ready in the kitchen whenever you are Min.
+  - Okay little one, all I need from you is to sign your name here.
+  - Please do try to be accurate with your work or else you will need to start over.

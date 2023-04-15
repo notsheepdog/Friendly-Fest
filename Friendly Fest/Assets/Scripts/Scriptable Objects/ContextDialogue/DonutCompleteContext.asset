@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
-  m_Name: IngredientContext
+  m_Name: DonutCompleteContext
   m_EditorClassIdentifier: 
-  name: Mom
+  name: Dad
   sentences:
-  - Welcome home Min!
-  - Thanks for helping out dad and I by getting the banner.
-  - Wanna help me get the ingredients together for the donuts?
-  - I was just about to start making them.
-  - I'll be in the kitchen whenever you're ready!
+  - Awesome job Min!
+  - I'll have your dad bake these and put them outside.
+  - You've helped us out so much today, I think you deserve some time off.
+  - Go on out there and talk to the other booths!
+  - Maybe keep an eye out for something cool!

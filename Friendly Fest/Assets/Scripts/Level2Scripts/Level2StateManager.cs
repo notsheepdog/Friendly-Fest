@@ -75,11 +75,13 @@ public class Level2StateManager : MonoBehaviour
     {
         
         this.manager.StartDialogue(ingredientsPrompt);
+        this.manager.DisplayNextSentence();
     }
 
     private void runMinigame3Guide()
     {
         this.manager.StartDialogue(donutsPrompt);
+        this.manager.DisplayNextSentence();
     }
 
     private void runMinigame4Guide()
@@ -90,5 +92,6 @@ public class Level2StateManager : MonoBehaviour
     private void runEpilogueDialogue()
     {
         this.manager.StartDialogue(epilogue);
+        this.manager.DisplayNextSentence();
     }
 }

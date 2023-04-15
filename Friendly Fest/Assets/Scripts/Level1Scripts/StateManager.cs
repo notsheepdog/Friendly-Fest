@@ -29,6 +29,7 @@ public class StateManager : MonoBehaviour
         } else if (!levelOneState.paperSigned)
         {
             this.manager.StartDialogue(welcome);
+            this.manager.DisplayNextSentence();
             displayer.curTask = signPaper;
             displayer.displayCurrentTask();
         }
@@ -54,6 +55,7 @@ public class StateManager : MonoBehaviour
     {
         bossAnimator.SetInteger("StateManager", 1);
         this.manager.StartDialogue(signingCompleted);
+        this.manager.DisplayNextSentence();
         sequenceRunning = false;
     }
 }
