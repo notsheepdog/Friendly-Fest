@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ed9a4ef94f045f5bf7135af2fb26f8, type: 3}
-  m_Name: Level2State
+  m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
+  m_Name: Cookie Item Dialogue
   m_EditorClassIdentifier: 
-  papersReturned: 0
-  ingreadientsFound: 0
-  ingredientsReturned: 0
-  donutsCreated: 0
+  name: Cookie guy
+  sentences:
+  - A spoon? Great!
+  - I'll be able to enjoy my ice cream with this!
+  - What? Cookies with ice cream?
+  - That's crazy.
+  - Anyway, take this cookie.

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5605b8d594adf485c8ae5c42a344a89d, type: 3}
   m_Name: HouseState
   m_EditorClassIdentifier: 
-  paperReceived: 0
-  ingredientsCollected: 0
-  donutsMade: 0
+  paperReceived: 1
+  ingredientsCollected: 1
+  donutsMade: 1
