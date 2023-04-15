@@ -16,12 +16,13 @@ public class CameraFollow : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        pitch = transform.rotation.eulerAngles.x;
         yaw = transform.rotation.eulerAngles.y;
     }
 
     void Update()
     {
-        if (pauseCamera)
+        if (DialogueManager.dialogueOn)
         {
             return;
         }

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static bool dialogueOn;
+
     public Queue<string> sentences;
     private string _name;
 
@@ -26,7 +28,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(interact))
+        if (Input.GetKeyDown(interact) && dialogueOn)
         {
             this.DisplayNextSentence();
         }
@@ -38,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
         this.sentences.Clear();
         this._textBox.SetActive(true);
-        CameraFollow.pauseCamera = true;
+        dialogueOn = true;
         foreach (var sentence in dialogue.Sentences)
         {
             this.sentences.Enqueue(sentence);
@@ -63,7 +65,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        CameraFollow.pauseCamera = false;
+        dialogueOn = false;
         this._textBox.SetActive(false);
     }
 }
