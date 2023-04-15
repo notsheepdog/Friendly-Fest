@@ -20,21 +20,18 @@ public class DialogueItemTrigger : DialogueTrigger
         if (this._playerInRange)
         {
             this._playerInRange = false;
-            if (levelManager.itemActive(item))
+            if (this._dialogueManager.sentences.Count == 0)
             {
-                this._dialogueManager.StartDialogue(this._itemDialogue);
-                levelManager.getItem(item);
-            }
-            else
-            {
-                this._dialogueManager.StartDialogue(this._dialogue);
-            }
-            this._dialogueManager.SetTrigger(this);
-
-            // quick fix (can be changed later) to update workie animations
-            if (transform.parent != null && transform.parent.GetComponent<NPCState>() != null)
-            {
-                transform.parent.GetComponent<NPCState>().DialogueEnter();
+                Debug.Log("starting a new dialogue");
+                if (levelManager.itemActive(item))
+                {
+                    this._dialogueManager.StartDialogue(this._itemDialogue);
+                    levelManager.getItem(item);
+                }
+                else
+                {
+                    this._dialogueManager.StartDialogue(this._dialogue);
+                }
             }
         }
     }
