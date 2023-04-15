@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1273273319}
   - component: {fileID: 1273273318}
   - component: {fileID: 1273273320}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: CurrentTask
   m_TagString: Objective
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 211214540430347779}
   - component: {fileID: 288279840950832499}
   - component: {fileID: 1773804230957713194}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 8957946365221497500}
   - component: {fileID: 1430677522035630663}
   - component: {fileID: 2671351130276124167}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Textbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 3946693512912261395}
   - component: {fileID: 5308206329187768140}
   - component: {fileID: 6555206446428174893}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: DialogueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,11 +650,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5004642703898646663, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 32
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5004642705328011685, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
       propertyPath: m_ClearFlags
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004642705507988465, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004642705793735328, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5150958059051749027, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
       propertyPath: target
@@ -710,6 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5150958059051749027, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
+    - {fileID: 5004642705328011684, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 075add944c94f484282f14e2cdbe3144, type: 3}
 --- !u!4 &5720006450107588444 stripped
 Transform:
@@ -750,6 +759,10 @@ PrefabInstance:
     - target: {fileID: 1085173269782787533, guid: bf18cc22428b746f7a87772ba7a76e7f, type: 3}
       propertyPath: m_Name
       value: InteractText
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085173269782787533, guid: bf18cc22428b746f7a87772ba7a76e7f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1085173269782787533, guid: bf18cc22428b746f7a87772ba7a76e7f, type: 3}
       propertyPath: m_IsActive

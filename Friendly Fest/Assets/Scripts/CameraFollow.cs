@@ -13,16 +13,9 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        if (pauseCamera)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         yaw = transform.rotation.eulerAngles.y;
     }
 
@@ -30,14 +23,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (pauseCamera)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
             return;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         pitch -= Input.GetAxis("Mouse Y");

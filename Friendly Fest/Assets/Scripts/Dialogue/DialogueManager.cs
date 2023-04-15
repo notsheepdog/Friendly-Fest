@@ -38,6 +38,7 @@ public class DialogueManager : MonoBehaviour
 
         this.sentences.Clear();
         this._textBox.SetActive(true);
+        CameraFollow.pauseCamera = true;
         foreach (var sentence in dialogue.Sentences)
         {
             this.sentences.Enqueue(sentence);
@@ -62,6 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        CameraFollow.pauseCamera = false;
         this._textBox.SetActive(false);
     }
 }
