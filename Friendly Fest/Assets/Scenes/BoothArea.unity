@@ -1194,7 +1194,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e66abc4c29ee57f4e9839a1f712f3415, type: 2}
+  - {fileID: 2100000, guid: 26f4bfdc01c31814480eaf095d6e2a1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2623,7 +2623,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e66abc4c29ee57f4e9839a1f712f3415, type: 2}
+  - {fileID: 2100000, guid: 26f4bfdc01c31814480eaf095d6e2a1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7366,6 +7366,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4323359968277723339, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26f4bfdc01c31814480eaf095d6e2a1e, type: 2}
     - target: {fileID: 4323359968277723340, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: walkSFX
       value: 
@@ -11930,7 +11934,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e66abc4c29ee57f4e9839a1f712f3415, type: 2}
+  - {fileID: 2100000, guid: 26f4bfdc01c31814480eaf095d6e2a1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12490,7 +12494,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e66abc4c29ee57f4e9839a1f712f3415, type: 2}
+  - {fileID: 2100000, guid: 26f4bfdc01c31814480eaf095d6e2a1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
