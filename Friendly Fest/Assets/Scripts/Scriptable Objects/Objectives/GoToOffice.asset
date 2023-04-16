@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
-  m_Name: New Dialogue SO 1
+  m_Script: {fileID: 11500000, guid: 8d68176f47f434072beb23ba4e790c58, type: 3}
+  m_Name: GoToOffice
   m_EditorClassIdentifier: 
-  name: Workie
-  sentences:
-  - "hello people watching\t"
-  - i can talk now
-  - Hooray!
+  objective: Go to the office for the banner
+  completed: 0

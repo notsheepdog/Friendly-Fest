@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
     public static bool dialogueOn;
 
     public Queue<string> sentences;
+    private List<Task> tasks_to_add;
     private string _name;
 
     public Text _dialogue_text;
@@ -17,11 +18,15 @@ public class DialogueManager : MonoBehaviour
 
     public KeyCode interact;
 
+    private TaskManager tm;
+
 
     // Start is called before the first frame update
     void Start()
     {
         this.sentences = new Queue<string>();
+        this.tm = FindObjectOfType<TaskManager>();
+        this.tasks_to_add = new List<Task>();
         this._name = "";
 
     }
@@ -46,6 +51,10 @@ public class DialogueManager : MonoBehaviour
             this.sentences.Enqueue(sentence);
         }
 
+        foreach (Task task in dialogue.tasks)
+        {
+            this.tasks_to_add.Add(task);
+        }
         this._name = dialogue.Name;
     }
 
@@ -67,5 +76,9 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueOn = false;
         this._textBox.SetActive(false);
+        foreach(Task t in this.tasks_to_add)
+        {
+            this.tm.AddTask(t);
+        }
     }
 }

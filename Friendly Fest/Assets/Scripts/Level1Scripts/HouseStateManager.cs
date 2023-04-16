@@ -24,7 +24,7 @@ public class HouseStateManager : MonoBehaviour
     public Task enjoy;
 
     DialogueTrigger motherDialogue;
-    DisplayQuests displayer;
+    TaskManager displayer;
 
     public LevelManager exitPoint;
     public GameObject donuts;
@@ -35,7 +35,7 @@ public class HouseStateManager : MonoBehaviour
         motherDialogue = minMother.GetComponentInChildren<DialogueTrigger>();
 
         displayer = GameObject.FindGameObjectWithTag("Objective")
-                    .GetComponent<DisplayQuests>();
+                    .GetComponent<TaskManager>();
 
     }
 
@@ -49,27 +49,23 @@ public class HouseStateManager : MonoBehaviour
         if (state.paperReceived && !state.ingredientsCollected && !state.donutsMade)
         {
             motherDialogue._dialogue = paper_signed;
-            displayer.curTask = collectIngredients;
-            displayer.displayCurrentTask();
+            displayer.ClearTasks();
+            displayer.AddTask(collectIngredients);
             exitPoint.nextScene = 4;
             donuts.SetActive(true);
         } else if (state.ingredientsCollected && !state.donutsMade)
         {
             motherDialogue._dialogue = collected_items;
-            displayer.curTask = createDonuts;
-            displayer.displayCurrentTask();
+            displayer.AddTask(createDonuts);
             donuts.GetComponent<LevelManager>().nextScene = 6;
         } else if (state.donutsMade)
         {
             motherDialogue._dialogue = donutsCreated;
-            displayer.curTask = enjoy;
-            displayer.displayCurrentTask();
+            displayer.AddTask(enjoy);
         }
         else
         {
             motherDialogue._dialogue = beginning;
-            displayer.curTask = fetchBanner;
-            displayer.displayCurrentTask();
             exitPoint.nextScene = 7;
             donuts.SetActive(false);
         }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu]
 public class DialogueSO : ScriptableObject
@@ -10,6 +11,8 @@ public class DialogueSO : ScriptableObject
     // Text area allows us to input from the Unity Scene
     [TextArea(3, 10)]
     [SerializeField] private string[] sentences;
+
+    public List<Task> tasks = new List<Task>();
 
     public string Name => name;
 
