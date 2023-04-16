@@ -7,6 +7,7 @@ TagManager:
   - toHome
   - toSign
   - Objective
+  - saveData
   layers:
   - Default
   - TransparentFX
