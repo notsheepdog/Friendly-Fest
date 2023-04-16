@@ -25,10 +25,10 @@ public class NPCState : MonoBehaviour
     GameObject player;
 
     // internal variables
-    State currentState;
+    public State currentState;
     float distanceToPlayer;
     int curWanderPointIdx = 0;
-    Vector3 curWanderPoint;
+    protected Vector3 curWanderPoint;
     float idleTimeElapsed = 0;
 
     protected virtual void Start()
@@ -74,15 +74,13 @@ public class NPCState : MonoBehaviour
     {
         idleTimeElapsed += Time.deltaTime;
 
-        if (distanceToPlayer <= lookDistance)
+        if (distanceToPlayer <= lookDistance && CanSeePlayer())
         {
-            currentState = State.Looking;
+            LookingEnter();
         }
         else if (idleTimeElapsed >= idleTime)
         {
-            currentState = State.Walking;
-            curWanderPointIdx = (curWanderPointIdx + 1) % wanderPoints.Length;
-            curWanderPoint = wanderPoints[curWanderPointIdx];
+            WalkingEnter();
         }
         else
         {
@@ -95,7 +93,7 @@ public class NPCState : MonoBehaviour
     {
         if (distanceToPlayer <= lookDistance && CanSeePlayer())
         {
-            currentState = State.Looking;
+            LookingEnter();
         }
         else if (Vector3.Distance(transform.position, curWanderPoint) <= wanderPointDistance)
         {
@@ -136,10 +134,22 @@ public class NPCState : MonoBehaviour
         currentState = State.Looking;
     }
 
-    void IdleEnter()
+    protected virtual void IdleEnter()
     {
         currentState = State.Idle;
         idleTimeElapsed = 0f;
+    }
+
+    protected virtual void WalkingEnter()
+    {
+        currentState = State.Walking;
+        curWanderPointIdx = (curWanderPointIdx + 1) % wanderPoints.Length;
+        curWanderPoint = wanderPoints[curWanderPointIdx];
+    }
+
+    protected virtual void LookingEnter()
+    {
+        currentState = State.Looking;
     }
 
     void FaceTarget(Vector3 target)
@@ -152,10 +162,11 @@ public class NPCState : MonoBehaviour
 
     bool CanSeePlayer()
     {
-        Vector3 directionToPlayer = player.transform.position - transform.position;
-
-        if (Vector3.Angle(directionToPlayer, transform.forward) <= fov)
+        Vector3 directionToPlayer = player.transform.position - (transform.position + new Vector3(0, 1, 0));
+        float angle = Vector3.Angle(directionToPlayer, transform.forward);
+        if (angle <= fov / 2)
         {
+            Debug.Log(angle);
             RaycastHit hit;
             if (Physics.Raycast(transform.position, directionToPlayer, out hit, lookDistance))
             {
@@ -166,5 +177,19 @@ public class NPCState : MonoBehaviour
             }
         }
         return false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 sightLine = transform.position + (transform.forward * lookDistance);
+        Vector3 rightLine = transform.position + ((Quaternion.Euler(0, 0.5f * fov, 0) * transform.forward) * lookDistance);
+        Vector3 leftLine = transform.position + ((Quaternion.Euler(0, -0.5f * fov, 0) * transform.forward) * lookDistance);
+        Debug.DrawLine(transform.position, sightLine, Color.red);
+        Debug.DrawLine(transform.position, rightLine, Color.red);
+        Debug.DrawLine(transform.position, leftLine, Color.red);
+        foreach (Vector3 wanderPoint in wanderPoints)
+        {
+            Debug.DrawLine(transform.position, wanderPoint, Color.cyan);
+        }
     }
 }
