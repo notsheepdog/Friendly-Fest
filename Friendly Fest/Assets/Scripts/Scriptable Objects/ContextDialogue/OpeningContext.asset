@@ -21,3 +21,5 @@ MonoBehaviour:
   - You just have to go the the office across town.
   - You'll probably sign some paper work to get our banner.
   - Thank you again Min!
+  tasks:
+  - {fileID: 11400000, guid: 707d428661eaf4cfc971cde743af90b3, type: 2}
