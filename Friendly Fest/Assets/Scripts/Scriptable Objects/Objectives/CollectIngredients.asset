@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d68176f47f434072beb23ba4e790c58, type: 3}
   m_Name: CollectIngredients
   m_EditorClassIdentifier: 
-  objective: Collect the ingredients for the donutt dough
+  objective: Help Mom collect the ingredients for the donut dough
   completed: 0
