@@ -15,6 +15,7 @@ public class NPCState : MonoBehaviour
     public float idleTime = 3;
     public float lookDistance = 8;
     public float wanderPointDistance = 1;
+    public float fov = 135;
     // wander points are added in the inspector.
     // if no wander points are added in inspector, the NPC's starting position will be added as a wander point.
     public Vector3[] wanderPoints;
@@ -30,7 +31,7 @@ public class NPCState : MonoBehaviour
     Vector3 curWanderPoint;
     float idleTimeElapsed = 0;
 
-    void Start()
+    protected virtual void Start()
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -63,6 +64,11 @@ public class NPCState : MonoBehaviour
         }
     }
 
+    protected virtual void MoveToTarget(Vector3 target)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    }
+
     // idle NPCs are waiting until they go to their next wander point
     void UpdateIdle()
     {
@@ -87,7 +93,7 @@ public class NPCState : MonoBehaviour
     // walking NPCs are moving towards their next wander point
     void UpdateWalking()
     {
-        if (distanceToPlayer <= lookDistance)
+        if (distanceToPlayer <= lookDistance && CanSeePlayer())
         {
             currentState = State.Looking;
         }
@@ -99,7 +105,7 @@ public class NPCState : MonoBehaviour
         {
             // walking animation
             FaceTarget(curWanderPoint);
-            transform.position = Vector3.MoveTowards(transform.position, curWanderPoint, speed * Time.deltaTime);
+            MoveToTarget(curWanderPoint);
         }
     }
 
@@ -142,5 +148,23 @@ public class NPCState : MonoBehaviour
         directionToTarget.y = 0;
         Quaternion lookRotation = Quaternion.LookRotation(directionToTarget);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+    }
+
+    bool CanSeePlayer()
+    {
+        Vector3 directionToPlayer = player.transform.position - transform.position;
+
+        if (Vector3.Angle(directionToPlayer, transform.forward) <= fov)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, directionToPlayer, out hit, lookDistance))
+            {
+                if (hit.collider.CompareTag("Player"))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
