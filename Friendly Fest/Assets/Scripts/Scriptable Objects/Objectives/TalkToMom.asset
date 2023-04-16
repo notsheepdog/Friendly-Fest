@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d68176f47f434072beb23ba4e790c58, type: 3}
   m_Name: TalkToMom
   m_EditorClassIdentifier: 
-  objective: Talk to mom to ask how you can help
+  objective: Talk to dad to ask how you can help
   completed: 0

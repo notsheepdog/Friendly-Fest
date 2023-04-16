@@ -15,5 +15,6 @@ MonoBehaviour:
   name: Min
   sentences:
   - Im back!
-  - I should go back home adn deliver these to mom.
+  - I should go back home put up the banner, and let dad know.
   - I'm glad I can always recognize my house by the chimeny!
+  tasks: []

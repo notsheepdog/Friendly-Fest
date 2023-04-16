@@ -12,7 +12,9 @@ public class DialoguePlayOnStart : MonoBehaviour
     {
         if(!visited)
         {
-            GameObject.FindObjectOfType<DialogueManager>().StartDialogue(introDialogue);
+            DialogueManager dm = GameObject.FindObjectOfType<DialogueManager>();
+            dm.StartDialogue(introDialogue);
+            dm.DisplayNextSentence();
             visited = true;
         }
     }
