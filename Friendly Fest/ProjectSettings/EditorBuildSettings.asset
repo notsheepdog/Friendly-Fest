@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CelebrationScene.unity
     guid: de9d94677c31c8b4ea6776058fbe75c2
+  - enabled: 1
+    path: Assets/Scenes/Closing Dialogue.unity
+    guid: 2b200a16feb6e3b478e85d4ea56964e9
   m_configObjects: {}

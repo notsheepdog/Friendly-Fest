@@ -17,16 +17,12 @@ public class CelebrationDialogue : MonoBehaviour
 
     IEnumerator startCelebration()
     {
-        yield return new WaitForSeconds(2);
-        Debug.Log("start");
+        yield return new WaitForSeconds(.01f);
         if (!celebrationVisited)
         {
-            Debug.Log("inside");
-            //            dm = GameObject.FindObjectOfType<DialogueManager>();
             dm.StartDialogue(introDialogue);
             dm.DisplayNextSentence();
             celebrationVisited = true;
         }
-        Debug.Log("done");
     }
 }

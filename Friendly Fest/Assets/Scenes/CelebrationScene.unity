@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14161554, g: 0.13653731, b: 0.20047686, a: 1}
+  m_IndirectSpecularColor: {r: 0.14128166, g: 0.13653651, b: 0.20121282, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -28619,7 +28619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd01a770c7176f1428de15d43511a7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 1
+  nextScene: 10
   exclamation: {fileID: 1129177487}
   interaction: 32
 --- !u!4 &650898704
@@ -50793,6 +50793,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1273273316, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946693512912261395, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 545.689
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946693512912261395, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.452
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946693512912261395, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -28.804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946693512912261395, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 113.117
+      objectReference: {fileID: 0}
     - target: {fileID: 4323359967809810534, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: mouseSensitivity
       value: 100
@@ -50803,31 +50823,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.08
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: 1.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -74.7
+      value: 82.6
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.08763604
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.9961526
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -50835,7 +50855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -169.945
       objectReference: {fileID: 0}
     - target: {fileID: 4323359968277723337, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -50868,6 +50888,10 @@ PrefabInstance:
     - target: {fileID: 4531927822914568252, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618276059007787410, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
+      propertyPath: m_text
+      value: Enjoy the festival!
       objectReference: {fileID: 0}
     - target: {fileID: 5664723286879662416, guid: 52adadab830b84249b0d03a6cf4cd010, type: 3}
       propertyPath: m_IsActive
