@@ -19,5 +19,5 @@ MonoBehaviour:
   - That cookie guy looks like he has the COOLEST cookies!
   - I wonder how I can get one...
   tasks:
-  - {fileID: 11400000, guid: dd0acfc389772a74a92900f94f337305, type: 2}
+  - {fileID: 11400000, guid: f21f34221b28bea4e9623199da95fcf8, type: 2}
   mark_complete: []

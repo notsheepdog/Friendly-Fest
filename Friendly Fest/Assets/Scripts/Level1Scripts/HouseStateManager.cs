@@ -15,9 +15,11 @@ public class HouseStateManager : MonoBehaviour
     public DialogueSO paper_signed;
     public Task fetchBanner;
 
+    public DialogueSO collected_items_self;
     public DialogueSO collected_items;
     public Task collectIngredients;
 
+    public DialogueSO donuts_created_self;
     public DialogueSO donutsCreated;
     public Task createDonuts;
 
@@ -28,6 +30,7 @@ public class HouseStateManager : MonoBehaviour
 
     public LevelManager exitPoint;
     public GameObject donuts;
+    DialogueManager dm;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +39,9 @@ public class HouseStateManager : MonoBehaviour
 
         displayer = GameObject.FindGameObjectWithTag("Objective")
                     .GetComponent<TaskManager>();
+        dm = FindObjectOfType<DialogueManager>();
+        displayer.RenderTasks();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         state.paperReceived = oneState.paperSigned;
         state.ingredientsCollected = twoState.ingreadientsFound;
         state.donutsMade = twoState.donutsCreated;
@@ -56,9 +56,13 @@ public class HouseStateManager : MonoBehaviour
         {
             motherDialogue._dialogue = collected_items;
             donuts.GetComponent<LevelManager>().nextScene = 7;
+            dm.StartDialogue(collected_items_self);
+            dm.DisplayNextSentence();
         } else if (state.donutsMade)
         {
             motherDialogue._dialogue = donutsCreated;
+            dm.StartDialogue(donuts_created_self);
+            dm.DisplayNextSentence();
         }
         else
         {

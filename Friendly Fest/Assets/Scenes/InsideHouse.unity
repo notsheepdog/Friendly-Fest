@@ -12435,8 +12435,10 @@ MonoBehaviour:
   beginningTask: {fileID: 11400000, guid: 1e719873c8390476499f1eacd1ab11cc, type: 2}
   paper_signed: {fileID: 11400000, guid: d080106c3894f6244a5f54cbc192ffe0, type: 2}
   fetchBanner: {fileID: 11400000, guid: cc421c1194e084cf3908bed900edcb30, type: 2}
-  collected_items: {fileID: 11400000, guid: e0670d3bf5e4b4872ad7776057fb04ee, type: 2}
+  collected_items_self: {fileID: 11400000, guid: e0670d3bf5e4b4872ad7776057fb04ee, type: 2}
+  collected_items: {fileID: 11400000, guid: 36f406feac646de44888388823889369, type: 2}
   collectIngredients: {fileID: 11400000, guid: 3fb93c7a2e1ca4b49916810d65a7f1d8, type: 2}
+  donuts_created_self: {fileID: 11400000, guid: 465e6e48d7f0e4455822b0271685b365, type: 2}
   donutsCreated: {fileID: 11400000, guid: 6c51bea19e4b01249bb79e7bc932a311, type: 2}
   createDonuts: {fileID: 11400000, guid: 9a52f9049e09549b289355f991cc4d82, type: 2}
   enjoy: {fileID: 11400000, guid: 5582549ffc2b4402d9025e799f969b6a, type: 2}

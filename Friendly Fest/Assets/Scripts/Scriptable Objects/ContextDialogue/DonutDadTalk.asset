@@ -15,12 +15,16 @@ MonoBehaviour:
   name: Dad
   sentences:
   - Awesome job Min!
-  - Your mom just put the donuts in the oven. Mmmm, I can smell them now!
+  - 'Your mom just put the donuts in the oven.
+
+    Mmmm, I can smell them now!'
   - When they're done baking, we'll put them on display at the booth!
-  - You've helped us out so much today, I think you deserve some time off.
+  - 'You''ve helped us out so much today,
+
+    I think you deserve some time off.'
   - Go on out there and talk to the other booths!
   - Maybe keep an eye out for something cool!
   tasks:
-  - {fileID: 11400000, guid: 5582549ffc2b4402d9025e799f969b6a, type: 2}
+  - {fileID: 11400000, guid: dd0acfc389772a74a92900f94f337305, type: 2}
   mark_complete:
   - {fileID: 11400000, guid: 6daf10d8974294665a1d83621d34e06b, type: 2}

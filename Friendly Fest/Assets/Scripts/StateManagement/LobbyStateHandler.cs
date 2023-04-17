@@ -13,6 +13,7 @@ public class LobbyStateHandler : MonoBehaviour
     void Start()
     {
         displayer = GameObject.FindObjectOfType<TaskManager>();
+        displayer.RenderTasks();
         if (!visited)
         {
             DialogueManager dm = GameObject.FindObjectOfType<DialogueManager>();
