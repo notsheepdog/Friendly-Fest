@@ -73,7 +73,7 @@ public class MovementController : MonoBehaviour
     {
         controller.Move(direction * speed * Time.deltaTime);
 
-        if (direction != Vector3.zero && soundCooldown <= 0)
+        if ((direction.x != 0 || direction.z != 0) && soundCooldown <= 0)
         {
             AudioSource.PlayClipAtPoint(walkSFX, transform.position, 20);
             soundCooldown = soundCooldownMax;

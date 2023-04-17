@@ -27954,7 +27954,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introDialogue: {fileID: 11400000, guid: 1c05b2baf3deb9a48b543face8819c20, type: 2}
-  dm: {fileID: 1433353986}
 --- !u!1001 &552266900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28619,7 +28618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd01a770c7176f1428de15d43511a7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 0
+  nextScene: 1
   exclamation: {fileID: 1129177487}
   interaction: 32
 --- !u!4 &650898704

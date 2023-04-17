@@ -19,7 +19,7 @@ public class LeaveOffice : MonoBehaviour
     {
         if (scriptableObj.paperSigned)
         {
-            FindObjectOfType<LevelManager>().nextScene = 3;
+            FindObjectOfType<LevelManager>().nextScene = 4;
             FindObjectOfType<LevelManager>().MoveToNextScene();
         }
     }

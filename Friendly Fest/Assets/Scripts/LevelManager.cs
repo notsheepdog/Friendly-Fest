@@ -53,6 +53,7 @@ public class LevelManager : MonoBehaviour
 
     public void MoveToNextScene()
     {
+        Debug.Log(nextScene);
         SceneManager.LoadScene(nextScene);
     }
 }

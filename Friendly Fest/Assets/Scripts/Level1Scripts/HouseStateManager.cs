@@ -50,12 +50,12 @@ public class HouseStateManager : MonoBehaviour
         {
             motherDialogue._dialogue = paper_signed;
             //displayer.ClearTasks();
-            exitPoint.nextScene = 4;
+            exitPoint.nextScene = 5;
             donuts.SetActive(true);
         } else if (state.ingredientsCollected && !state.donutsMade)
         {
             motherDialogue._dialogue = collected_items;
-            donuts.GetComponent<LevelManager>().nextScene = 6;
+            donuts.GetComponent<LevelManager>().nextScene = 7;
         } else if (state.donutsMade)
         {
             motherDialogue._dialogue = donutsCreated;
@@ -63,7 +63,7 @@ public class HouseStateManager : MonoBehaviour
         else
         {
             motherDialogue._dialogue = beginning;
-            exitPoint.nextScene = 4;
+            exitPoint.nextScene = 5;
             donuts.SetActive(false);
         }
     }
