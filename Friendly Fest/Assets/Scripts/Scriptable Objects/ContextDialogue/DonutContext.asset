@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Dad
   sentences:
-  - Now that everything is all gathered, I'll make the dough.
-  - How about you help me shape the doughnuts?
+  - Looks like your mom is working on the dough.
   - I know that's your favorite part!
   - I'm ready in the kitchen whenever you are Min.
   tasks:

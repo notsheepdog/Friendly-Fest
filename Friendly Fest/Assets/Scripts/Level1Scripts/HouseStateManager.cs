@@ -56,11 +56,13 @@ public class HouseStateManager : MonoBehaviour
         {
             motherDialogue._dialogue = collected_items;
             donuts.GetComponent<LevelManager>().nextScene = 7;
+            displayer.ClearTasks();
             dm.StartDialogue(collected_items_self);
             dm.DisplayNextSentence();
         } else if (state.donutsMade)
         {
             motherDialogue._dialogue = donutsCreated;
+            displayer.ClearTasks();
             dm.StartDialogue(donuts_created_self);
             dm.DisplayNextSentence();
         }

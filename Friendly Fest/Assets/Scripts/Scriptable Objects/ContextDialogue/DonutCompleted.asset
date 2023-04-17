@@ -19,5 +19,4 @@ MonoBehaviour:
   - I hope everyone at the festival gets to see them!
   tasks:
   - {fileID: 11400000, guid: 6daf10d8974294665a1d83621d34e06b, type: 2}
-  mark_complete:
-  - {fileID: 11400000, guid: 9a52f9049e09549b289355f991cc4d82, type: 2}
+  mark_complete: []
