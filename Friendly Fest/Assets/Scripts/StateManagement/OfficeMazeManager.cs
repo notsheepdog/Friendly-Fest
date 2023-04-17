@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialoguePlayOnStart : MonoBehaviour
+public class OfficeMazeManager : MonoBehaviour
 {
-    private static bool signingVisited = false;
+    private static bool visited;
     public DialogueSO introDialogue;
+    public Task newTask;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        if(!signingVisited)
+        if (!visited)
         {
             DialogueManager dm = GameObject.FindObjectOfType<DialogueManager>();
             dm.StartDialogue(introDialogue);
             dm.DisplayNextSentence();
-            signingVisited = true;
+            visited = true;
         }
     }
+
 }

@@ -6,22 +6,19 @@ public class LobbyStateHandler : MonoBehaviour
 {
     private static bool visited;
     public DialogueSO introDialogue;
-    public Task newTask;
-    private DisplayQuests displayer;
+    private TaskManager displayer;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        displayer = GameObject.FindObjectOfType<DisplayQuests>();
+        displayer = GameObject.FindObjectOfType<TaskManager>();
         if (!visited)
         {
             DialogueManager dm = GameObject.FindObjectOfType<DialogueManager>();
             dm.StartDialogue(introDialogue);
             dm.DisplayNextSentence();
             visited = true;
-            displayer.curTask = newTask;
-            displayer.displayCurrentTask();
         }
     }
 

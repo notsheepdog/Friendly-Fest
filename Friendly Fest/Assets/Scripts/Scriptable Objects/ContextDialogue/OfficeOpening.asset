@@ -20,3 +20,5 @@ MonoBehaviour:
   - Maybe on the top floor?
   tasks:
   - {fileID: 11400000, guid: 0c5b239e9fc294baf82c6ff9ca49e799, type: 2}
+  mark_complete:
+  - {fileID: 11400000, guid: 707d428661eaf4cfc971cde743af90b3, type: 2}

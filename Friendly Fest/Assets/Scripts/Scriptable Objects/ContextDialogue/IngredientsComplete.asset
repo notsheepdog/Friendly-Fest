@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
-  m_Name: DonutCompleteContext
+  m_Name: IngredientsComplete
   m_EditorClassIdentifier: 
-  name: Dad
+  name: Min
   sentences:
-  - Awesome job Min!
-  - I'll have your dad bake these and put them outside.
-  - You've helped us out so much today, I think you deserve some time off.
-  - Go on out there and talk to the other booths!
-  - Maybe keep an eye out for something cool!
+  - Yippee I found all of the ingredients!
+  - I should go back to the living room and deliver this to dad!
+  tasks:
+  - {fileID: 11400000, guid: 4121b5419d89d450c915259ef6fe89b4, type: 2}
+  mark_complete:
+  - {fileID: 11400000, guid: 3fb93c7a2e1ca4b49916810d65a7f1d8, type: 2}

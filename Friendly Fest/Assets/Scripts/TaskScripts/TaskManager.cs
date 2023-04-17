@@ -12,9 +12,9 @@ public class TaskManager : MonoBehaviour
 
     public void Start()
     {
-        cur_tasks = new Dictionary<string, Task>();
         if (!initialized)
         {
+            cur_tasks = new Dictionary<string, Task>();
             this.AddTask(starting_task);
             initialized = true;
         }
@@ -37,6 +37,7 @@ public class TaskManager : MonoBehaviour
 
             if (cur.completed)
             {
+                Debug.Log("printing completed task");
                 task_acc += "<s>" + cur.objective + "</s>\n";
             }
             else
@@ -67,6 +68,7 @@ public class TaskManager : MonoBehaviour
     public void CompleteTask(Task t)
     {
         cur_tasks[t.objective].completed = true;
+        this.RenderTasks();
     }
 
 }

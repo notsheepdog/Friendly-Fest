@@ -6,11 +6,12 @@ public class ResetSOs : MonoBehaviour
 {
     public Level1 lv1;
     public Level2SO lv2;
+    public List<Task> resetTasks;
 
     private static bool gameStart = true; //is this the starting scene?
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (gameStart)
         {
@@ -21,6 +22,11 @@ public class ResetSOs : MonoBehaviour
             lv2.donutsCreated = false;
             lv2.itemsTraded = false;
             //level3 stuffs here if applicable...
+            foreach(Task t in resetTasks)
+            {
+                t.completed = false;
+            }
+
             gameStart = false;
         }
     }

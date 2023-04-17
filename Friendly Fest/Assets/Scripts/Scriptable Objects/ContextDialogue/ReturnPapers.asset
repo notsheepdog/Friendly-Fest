@@ -17,4 +17,6 @@ MonoBehaviour:
   - Im back!
   - I should go back home put up the banner, and let dad know.
   - I'm glad I can always recognize my house by the chimeny!
-  tasks: []
+  tasks:
+  - {fileID: 11400000, guid: d8a1aa5530ffe4b8fb553f1f9012788a, type: 2}
+  mark_complete: []

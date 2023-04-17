@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
-  m_Name: MazeContext
+  m_Name: DonutCompleted
   m_EditorClassIdentifier: 
-  name: Min
+  name: 
   sentences:
-  - Hmmm there are many work boxes here...
-  - I have to find my way through all of them.
-  - Time for an adventure!
+  - Woo that was tough!
+  - But these donuts look so nice and round
+  - I bet dad may even put them in the display out front!
   tasks:
-  - {fileID: 11400000, guid: 2d1e8bd41a1ea4a0eaf2035732791c88, type: 2}
-  mark_complete: []
+  - {fileID: 11400000, guid: 6daf10d8974294665a1d83621d34e06b, type: 2}
+  mark_complete:
+  - {fileID: 11400000, guid: 9a52f9049e09549b289355f991cc4d82, type: 2}

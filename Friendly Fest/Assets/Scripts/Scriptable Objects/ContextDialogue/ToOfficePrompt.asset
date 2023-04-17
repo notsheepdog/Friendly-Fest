@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d68176f47f434072beb23ba4e790c58, type: 3}
-  m_Name: BringIngredients
+  m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
+  m_Name: ToOfficePrompt
   m_EditorClassIdentifier: 
-  objective: Go back to the living room and talk to dad
-  completed: 0
+  name: Min
+  sentences:
+  - I think Dad said that is all the way at the end of the pathway
+  - It should be right off the circular area here...
+  tasks: []
+  mark_complete: []

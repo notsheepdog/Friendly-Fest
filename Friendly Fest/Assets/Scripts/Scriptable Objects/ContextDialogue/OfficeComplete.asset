@@ -17,3 +17,6 @@ MonoBehaviour:
   - Alright you are all set here little one.
   - Please leave in a timely manner.
   - The festival starts in 2.98 hours, so I would hurry to your booth.
+  tasks:
+  - {fileID: 11400000, guid: 78f8d07d4b7df45418cc9c3903ffef0a, type: 2}
+  mark_complete: []

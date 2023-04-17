@@ -20,3 +20,8 @@ MonoBehaviour:
   - Now, come to my desk so you can sign the paper.
   - Once that is done the banner is yours.
   - Try to take 2.5 less than I alloted to this meeting, so I can remain on schedule.
+  tasks:
+  - {fileID: 11400000, guid: cc421c1194e084cf3908bed900edcb30, type: 2}
+  mark_complete:
+  - {fileID: 11400000, guid: 0c5b239e9fc294baf82c6ff9ca49e799, type: 2}
+  - {fileID: 11400000, guid: 0c5b239e9fc294baf82c6ff9ca49e799, type: 2}
