@@ -47,6 +47,14 @@ public class Level2StateManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (tradeItems.completed)
+        {
+            StartCoroutine(triggerEnd());
+        }
+    }
+
     public bool itemActive(int idx)
     {
         if (idx == 0)
@@ -62,12 +70,12 @@ public class Level2StateManager : MonoBehaviour
     public void getItem(int idx)
     {
         items[idx] = true;
-        if (items[0] && items[1] && items[2])
-        {
-            levelTwoState.itemsTraded = true;
-//            runEpilogueDialogue();
-            displayer.AddTask(exploreFestival);
-        }
+    }
+
+    public IEnumerator triggerEnd() // moves to the evening scene
+    {
+        yield return new WaitForSeconds(2);
+        levelTwoState.itemsTraded = true;
     }
 
     private void runToOfficeDialogue()

@@ -54,7 +54,6 @@ public class TaskManager : MonoBehaviour
 
             if (cur.completed)
             {
-                Debug.Log("printing completed task");
                 task_acc += "<s>" + cur.objective + "</s>\n";
             }
             else

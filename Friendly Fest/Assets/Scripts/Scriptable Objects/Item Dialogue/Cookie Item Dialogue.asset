@@ -19,4 +19,6 @@ MonoBehaviour:
   - Well I suppose I can give you a cookie now.
   - Here you go! Enjoy the festival!
   tasks: []
-  mark_complete: []
+  mark_complete:
+  - {fileID: 11400000, guid: f21f34221b28bea4e9623199da95fcf8, type: 2}
+  - {fileID: 11400000, guid: dd0acfc389772a74a92900f94f337305, type: 2}
