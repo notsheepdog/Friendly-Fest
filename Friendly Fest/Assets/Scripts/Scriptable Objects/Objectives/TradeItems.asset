@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d68176f47f434072beb23ba4e790c58, type: 3}
   m_Name: TradeItems
   m_EditorClassIdentifier: 
-  objective: Trade items at the festival!
+  objective: Find something cool at the festival
   completed: 0

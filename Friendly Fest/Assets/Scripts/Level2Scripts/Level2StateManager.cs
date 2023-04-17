@@ -15,7 +15,7 @@ public class Level2StateManager : MonoBehaviour
     private TaskManager displayer;
 
     public Task returnIngredients;
-    public Task finishedDonuts;
+    public Task exploreFestival;
     public Task tradeItems;
 
     public bool[] items = { false, false, false };
@@ -65,8 +65,8 @@ public class Level2StateManager : MonoBehaviour
         if (items[0] && items[1] && items[2])
         {
             levelTwoState.itemsTraded = true;
-            runEpilogueDialogue();
-            displayer.AddTask(finishedDonuts);
+//            runEpilogueDialogue();
+            displayer.AddTask(exploreFestival);
         }
     }
 
@@ -93,6 +93,7 @@ public class Level2StateManager : MonoBehaviour
     private void runMinigame4Guide()
     {
         this.manager.StartDialogue(tradingPrompt);
+        this.manager.DisplayNextSentence();
     }
 
     private void runEpilogueDialogue()

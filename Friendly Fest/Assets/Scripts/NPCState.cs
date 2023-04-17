@@ -166,16 +166,7 @@ public class NPCState : MonoBehaviour
         float angle = Vector3.Angle(directionToPlayer, transform.forward);
         if (angle <= fov / 2)
         {
-            Debug.Log(angle);
             return true;
-            /*RaycastHit hit;
-            if (Physics.Raycast(transform.position, directionToPlayer, out hit, lookDistance))
-            {
-                if (hit.collider.CompareTag("Player"))
-                {
-                    return true;
-                }
-            }*/
         }
         return false;
     }

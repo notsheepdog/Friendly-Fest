@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ed9a4ef94f045f5bf7135af2fb26f8, type: 3}
   m_Name: Level2State
   m_EditorClassIdentifier: 
-  papersReturned: 0
+  papersReturned: 1
   ingreadientsFound: 0
   ingredientsReturned: 0
   donutsCreated: 0
+  itemsTraded: 0

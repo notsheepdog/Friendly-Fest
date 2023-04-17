@@ -16,3 +16,6 @@ MonoBehaviour:
   sentences:
   - Now it's time to do trading!
   - I need to trade to get something
+  tasks:
+  - {fileID: 11400000, guid: dd0acfc389772a74a92900f94f337305, type: 2}
+  mark_complete: []
