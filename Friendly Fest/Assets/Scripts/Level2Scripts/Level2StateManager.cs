@@ -5,12 +5,14 @@ using UnityEngine;
 public class Level2StateManager : MonoBehaviour
 {
     [SerializeField] private Level2SO levelTwoState;
+    [SerializeField] private Level1 levelOneState;
+    public DialogueSO toOfficePrompt;
     public DialogueSO ingredientsPrompt;
     public DialogueSO donutsPrompt;
     public DialogueSO tradingPrompt;
     public DialogueSO epilogue;
     [SerializeField] private DialogueManager manager;
-    private DisplayQuests displayer;
+    private TaskManager displayer;
 
     public Task returnIngredients;
     public Task finishedDonuts;
@@ -21,28 +23,27 @@ public class Level2StateManager : MonoBehaviour
     void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
-        displayer = FindObjectOfType<DisplayQuests>();
+        displayer = FindObjectOfType<TaskManager>();
+        displayer.RenderTasks();
 
         if (levelTwoState.ingreadientsFound && levelTwoState.donutsCreated) // start the trading minigame
         {
             runMinigame4Guide();
-            displayer.curTask = tradeItems;
-            displayer.displayCurrentTask();
         } else if (levelTwoState.ingreadientsFound) // prompt for the donuts
         {
             runMinigame3Guide();
-            displayer.curTask = returnIngredients;
-            displayer.displayCurrentTask();
         }
         else if (levelTwoState.itemsTraded) // I don't think this should ever happen but i'm leaving it in
         {
             runEpilogueDialogue();
-            displayer.curTask = finishedDonuts;
-            displayer.displayCurrentTask();
+        }
+        else if (levelOneState.paperSigned)
+        {
+            runMinigame2Guide(); // prompt for the ingredients
         }
         else
         {
-            runMinigame2Guide(); // prompt for the ingredients
+            runToOfficeDialogue();
         }
     }
 
@@ -65,9 +66,14 @@ public class Level2StateManager : MonoBehaviour
         {
             levelTwoState.itemsTraded = true;
             runEpilogueDialogue();
-            displayer.curTask = finishedDonuts;
-            displayer.displayCurrentTask();
+            displayer.AddTask(finishedDonuts);
         }
+    }
+
+    private void runToOfficeDialogue()
+    {
+        this.manager.StartDialogue(this.toOfficePrompt);
+        this.manager.DisplayNextSentence();
     }
 
 

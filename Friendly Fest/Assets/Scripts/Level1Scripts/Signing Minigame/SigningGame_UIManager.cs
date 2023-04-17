@@ -57,8 +57,6 @@ public class SigningGame_UIManager : MonoBehaviour
             AudioSource.PlayClipAtPoint(retrySFX, Camera.main.transform.position);
             results.text = "let's give that another try!";
 
-            level1State.paperSigned = false;
-
             for (int i = drawingBoard.childCount; i > 0; i--)
             {
                 LineRenderer lr = drawingBoard.GetChild(i - 1).GetComponent<LineRenderer>();

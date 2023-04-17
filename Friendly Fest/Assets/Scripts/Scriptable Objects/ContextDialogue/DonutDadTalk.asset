@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
-  m_Name: DonutContext
+  m_Name: DonutDadTalk
   m_EditorClassIdentifier: 
   name: Dad
   sentences:
-  - Now that everything is all gathered, I'll make the dough.
-  - How about you help me shape the doughnuts?
-  - I know that's your favorite part!
-  - I'm ready in the kitchen whenever you are Min.
+  - Awesome job Min!
+  - I'll have your dad bake these and put them outside.
+  - You've helped us out so much today, I think you deserve some time off.
+  - Go on out there and talk to the other booths!
+  - Maybe keep an eye out for something cool!
   tasks:
-  - {fileID: 11400000, guid: 9a52f9049e09549b289355f991cc4d82, type: 2}
+  - {fileID: 11400000, guid: 5582549ffc2b4402d9025e799f969b6a, type: 2}
   mark_complete:
-  - {fileID: 11400000, guid: 4121b5419d89d450c915259ef6fe89b4, type: 2}
+  - {fileID: 11400000, guid: 6daf10d8974294665a1d83621d34e06b, type: 2}

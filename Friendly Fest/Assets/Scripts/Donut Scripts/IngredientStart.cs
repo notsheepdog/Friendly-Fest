@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialoguePlayOnStart : MonoBehaviour
+public class IngredientStart : MonoBehaviour
 {
-    private static bool signingVisited = false;
+    private static bool ingredientsVisited = false;
     public DialogueSO introDialogue;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(!signingVisited)
+        if (!ingredientsVisited)
         {
             DialogueManager dm = GameObject.FindObjectOfType<DialogueManager>();
             dm.StartDialogue(introDialogue);
             dm.DisplayNextSentence();
-            signingVisited = true;
+            ingredientsVisited = true;
         }
     }
 }

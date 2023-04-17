@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> sentences;
     private List<Task> tasks_to_add;
+    private List<Task> tasks_to_mark;
     private string _name;
 
     public Text _dialogue_text;
@@ -27,6 +28,7 @@ public class DialogueManager : MonoBehaviour
         this.sentences = new Queue<string>();
         this.tm = FindObjectOfType<TaskManager>();
         this.tasks_to_add = new List<Task>();
+        this.tasks_to_mark = new List<Task>();
         this._name = "";
 
     }
@@ -55,6 +57,12 @@ public class DialogueManager : MonoBehaviour
         {
             this.tasks_to_add.Add(task);
         }
+
+        foreach(Task task in dialogue.mark_complete)
+        {
+            this.tasks_to_mark.Add(task);
+        }
+
         this._name = dialogue.Name;
     }
 
@@ -79,6 +87,11 @@ public class DialogueManager : MonoBehaviour
         foreach(Task t in this.tasks_to_add)
         {
             this.tm.AddTask(t);
+        }
+
+        foreach(Task t in this.tasks_to_mark)
+        {
+            this.tm.CompleteTask(t);
         }
     }
 }

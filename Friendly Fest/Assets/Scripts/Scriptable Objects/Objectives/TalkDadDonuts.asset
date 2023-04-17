@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d68176f47f434072beb23ba4e790c58, type: 3}
-  m_Name: BringIngredients
+  m_Name: TalkDadDonuts
   m_EditorClassIdentifier: 
-  objective: Go back to the living room and talk to dad
+  objective: Report your completion to dad
   completed: 0

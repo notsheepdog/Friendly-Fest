@@ -14,6 +14,8 @@ public class DialogueSO : ScriptableObject
 
     public List<Task> tasks = new List<Task>();
 
+    public List<Task> mark_complete = new List<Task>();
+
     public string Name => name;
 
     public string[] Sentences => sentences;

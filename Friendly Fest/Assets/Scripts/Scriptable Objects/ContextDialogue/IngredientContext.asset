@@ -15,7 +15,12 @@ MonoBehaviour:
   name: Dad
   sentences:
   - Welcome home Min!
-  - Thanks for helping out dad and I by getting the banner.
+  - Thanks for helping out mom and I by getting the banner.
   - Wanna help me get the ingredients together for the donuts?
   - I was just about to start making them.
   - I'll be in the kitchen whenever you're ready!
+  tasks:
+  - {fileID: 11400000, guid: 3fb93c7a2e1ca4b49916810d65a7f1d8, type: 2}
+  mark_complete:
+  - {fileID: 11400000, guid: 78f8d07d4b7df45418cc9c3903ffef0a, type: 2}
+  - {fileID: 11400000, guid: d8a1aa5530ffe4b8fb553f1f9012788a, type: 2}

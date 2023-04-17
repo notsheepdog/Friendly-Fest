@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Min
   sentences:
   - Alright found all the ingredients. Time to give these to Mom and Dad.
+  tasks:
+  - {fileID: 11400000, guid: d8a1aa5530ffe4b8fb553f1f9012788a, type: 2}
+  mark_complete:
+  - {fileID: 11400000, guid: 3fb93c7a2e1ca4b49916810d65a7f1d8, type: 2}

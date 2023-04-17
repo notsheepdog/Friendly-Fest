@@ -11,7 +11,7 @@ public class StateManager : MonoBehaviour
     [SerializeField] private DialogueManager manager;
     private bool completed = false;
     private bool sequenceRunning = false;
-    private DisplayQuests displayer;
+    private TaskManager displayer;
 
     public Task signPaper;
     public Task returnSignage;
@@ -20,18 +20,17 @@ public class StateManager : MonoBehaviour
     void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
-        displayer = FindObjectOfType<DisplayQuests>();
+        displayer = FindObjectOfType<TaskManager>();
+        displayer.RenderTasks();
 
         if (levelOneState.paperSigned)
         {
-            displayer.curTask = returnSignage;
-            displayer.displayCurrentTask();
+            //displayer.ClearTasks();
+            //displayer.AddTask(returnSignage);
         } else if (!levelOneState.paperSigned)
         {
             this.manager.StartDialogue(welcome);
             this.manager.DisplayNextSentence();
-            displayer.curTask = signPaper;
-            displayer.displayCurrentTask();
         }
 
     }
@@ -43,6 +42,7 @@ public class StateManager : MonoBehaviour
         {
             completed = true;
             sequenceRunning = true;
+            displayer.ClearTasks();
             runWinSequence();
         }
         else if(!sequenceRunning)
@@ -56,6 +56,7 @@ public class StateManager : MonoBehaviour
         bossAnimator.SetInteger("StateManager", 1);
         this.manager.StartDialogue(signingCompleted);
         this.manager.DisplayNextSentence();
+        levelOneState.paperSigned = true;
         sequenceRunning = false;
     }
 }
