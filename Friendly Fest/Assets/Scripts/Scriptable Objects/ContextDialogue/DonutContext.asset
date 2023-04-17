@@ -16,7 +16,7 @@ MonoBehaviour:
   sentences:
   - Looks like your mom is working on the dough.
   - I know that's your favorite part!
-  - I'm ready in the kitchen whenever you are Min.
+  - Do you want to go help her make the donuts?
   tasks:
   - {fileID: 11400000, guid: 9a52f9049e09549b289355f991cc4d82, type: 2}
   mark_complete:
