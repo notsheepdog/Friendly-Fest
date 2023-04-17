@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
   m_Name: Ramen Item Dialogue
   m_EditorClassIdentifier: 
-  name: Ramen
+  name: Nood
   sentences:
   - Finally, my first bowl of ramen is ready!
-  - Bring it to the spoon guy he likes soup
+  - Min! You look like you could use a bowl of ramen.
+  - You never know when it might come in handy.
+  tasks: []
+  mark_complete: []

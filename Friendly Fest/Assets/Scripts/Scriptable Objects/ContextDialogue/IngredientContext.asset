@@ -16,9 +16,9 @@ MonoBehaviour:
   sentences:
   - Welcome home Min!
   - Thanks for helping out mom and I by getting the banner.
-  - Wanna help me get the ingredients together for the donuts?
-  - I was just about to start making them.
-  - I'll be in the kitchen whenever you're ready!
+  - Wanna help get the ingredients together for the donuts?
+  - Your mom was just about to start making them.
+  - She's looking for the ingredients in the kitchen right now!
   tasks:
   - {fileID: 11400000, guid: 3fb93c7a2e1ca4b49916810d65a7f1d8, type: 2}
   mark_complete:

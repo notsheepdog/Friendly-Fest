@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
   m_Name: Spoon Item Dialogue
   m_EditorClassIdentifier: 
-  name: Spoon guy
+  name: Spoo
   sentences:
-  - I love ramen! Thank you
-  - Do you need a spoon as thanks? Here, take one.
+  - Is that ramen? That looks tasty...
+  - I'd pay a lot for that ramen.
+  - I'd pay...
+  - ONE WHOLE SPOON!
+  - Here, take it. My finest spoon for the ramen.
+  tasks: []
+  mark_complete: []

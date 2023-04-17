@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
   m_Name: Ramen Dialogue
   m_EditorClassIdentifier: 
-  name: Ramen
+  name: Nood
   sentences:
-  - Have you ever tried ramen? It's great!
+  - Min! Have you ever tried ramen? It's great!
+  - Well don't stick around too long, I've got to keep stirring.
+  tasks: []
+  mark_complete: []

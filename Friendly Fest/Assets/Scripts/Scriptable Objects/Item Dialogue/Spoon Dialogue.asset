@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
   m_Name: Spoon Dialogue
   m_EditorClassIdentifier: 
-  name: Spoon guy
+  name: Spoo
   sentences:
-  - I am the spoon guy
+  - Nobody has more spoons than me!
+  - These spoons are EXQUISITE.
+  - Hey, hands off the display!
+  tasks: []
+  mark_complete: []

@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
   m_Name: Cookie Dialogue
   m_EditorClassIdentifier: 
-  name: Cookie guy
+  name: Muscle Cookie
   sentences:
-  - I don't like eating cookies.
-  - That's why I'm giving them to people!
+  - Hello little one! What's that? You want a cookie?
+  - Well I'd love to give you one, but I have my own problem.
+  - I have so much ice cream at home, but I don't have any spoons!
+  - I can't eat my ice cream!
+  - How's a guy supposed to give out cookies if he can't even have his ice cream?
+  tasks: []
+  mark_complete: []

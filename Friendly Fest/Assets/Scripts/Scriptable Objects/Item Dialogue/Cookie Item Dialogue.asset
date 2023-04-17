@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017589aa1001a4049b8345d6d63bd186, type: 3}
   m_Name: Cookie Item Dialogue
   m_EditorClassIdentifier: 
-  name: Cookie guy
+  name: Muscle Cookie
   sentences:
   - A spoon? Great!
   - I'll be able to enjoy my ice cream with this!
-  - What? Cookies with ice cream?
-  - That's crazy.
-  - Anyway, take this cookie.
+  - Well I suppose I can give you a cookie now.
+  - Here you go! Enjoy the festival!
+  tasks: []
+  mark_complete: []
