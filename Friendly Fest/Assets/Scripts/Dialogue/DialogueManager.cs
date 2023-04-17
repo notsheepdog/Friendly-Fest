@@ -93,11 +93,5 @@ public class DialogueManager : MonoBehaviour
         {
             this.tm.CompleteTask(t);
         }
-
-        if (GameObject.FindGameObjectWithTag("saveData") != null)
-        {
-            PersistentSaveData.UpdateTaskData();
-            PersistentSaveData.UpdateSceneData();
-        }
     }
 }
