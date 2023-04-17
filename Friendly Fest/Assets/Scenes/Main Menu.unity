@@ -1004,6 +1004,7 @@ GameObject:
   - component: {fileID: 656974413}
   - component: {fileID: 656974412}
   - component: {fileID: 656974414}
+  - component: {fileID: 656974415}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -1054,6 +1055,21 @@ MonoBehaviour:
   button: {fileID: 819585009}
   clicked: ON
   unclicked: OFF
+--- !u!114 &656974415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656974411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbd9a656d6cff04c9b029e11b773013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lv1: {fileID: 11400000, guid: 06b926d6c3d8a684ab82cacd46be6303, type: 2}
+  lv2: {fileID: 11400000, guid: 3a1d991ab59de4e03a7b27062e52251e, type: 2}
+  resetTasks: []
 --- !u!1 &705632776
 GameObject:
   m_ObjectHideFlags: 0
