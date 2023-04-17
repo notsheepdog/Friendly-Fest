@@ -14410,7 +14410,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4042650916287248890, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
       propertyPath: nextScene
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4042650916287248890, guid: 0e31e8c7bbcf8d44c8a0dc442ca7f11c, type: 3}
       propertyPath: exclamation

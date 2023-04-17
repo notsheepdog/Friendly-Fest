@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: e87951fc321e89d45b9ecfa548812682
+  - enabled: 1
     path: Assets/Scenes/InsideHouse.unity
     guid: d3ed156f9d42e4c4582d7b0d9f06bba0
   - enabled: 1
@@ -29,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OfficeLobby.unity
     guid: cf6fb14e7b093ca459177c7150de480a
+  - enabled: 1
+    path: Assets/Scenes/CelebrationScene.unity
+    guid: de9d94677c31c8b4ea6776058fbe75c2
   m_configObjects: {}
