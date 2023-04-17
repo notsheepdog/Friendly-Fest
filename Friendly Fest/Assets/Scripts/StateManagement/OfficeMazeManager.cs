@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OfficeMazeManager : MonoBehaviour
 {
-    private static bool visited;
+    public static bool visited;
     public DialogueSO introDialogue;
     public Task newTask;
 

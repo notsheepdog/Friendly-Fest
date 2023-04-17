@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1346,11 +1346,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78f8d07d4b7df45418cc9c3903ffef0a, type: 2}
   - {fileID: 11400000, guid: 3fb93c7a2e1ca4b49916810d65a7f1d8, type: 2}
   - {fileID: 11400000, guid: 5582549ffc2b4402d9025e799f969b6a, type: 2}
+  - {fileID: 11400000, guid: 707d428661eaf4cfc971cde743af90b3, type: 2}
   - {fileID: 11400000, guid: 0c5b239e9fc294baf82c6ff9ca49e799, type: 2}
   - {fileID: 11400000, guid: 9a52f9049e09549b289355f991cc4d82, type: 2}
   - {fileID: 11400000, guid: cc421c1194e084cf3908bed900edcb30, type: 2}
   - {fileID: 11400000, guid: 2d1e8bd41a1ea4a0eaf2035732791c88, type: 2}
+  - {fileID: 11400000, guid: 6daf10d8974294665a1d83621d34e06b, type: 2}
+  - {fileID: 11400000, guid: d8a1aa5530ffe4b8fb553f1f9012788a, type: 2}
   - {fileID: 11400000, guid: 1e719873c8390476499f1eacd1ab11cc, type: 2}
+  - {fileID: 11400000, guid: dd0acfc389772a74a92900f94f337305, type: 2}
+  houseState: {fileID: 11400000, guid: e0e83d255a5584600ac9e1b37222ecf9, type: 2}
+  level1State: {fileID: 11400000, guid: 06b926d6c3d8a684ab82cacd46be6303, type: 2}
+  level2State: {fileID: 11400000, guid: 3a1d991ab59de4e03a7b27062e52251e, type: 2}
 --- !u!4 &984189777
 Transform:
   m_ObjectHideFlags: 0
@@ -1757,7 +1764,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -29.357735, y: 0, z: -24.85569, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

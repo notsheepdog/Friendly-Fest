@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LobbyStateHandler : MonoBehaviour
 {
-    private static bool visited;
+    public static bool visited;
     public DialogueSO introDialogue;
     private TaskManager displayer;
 

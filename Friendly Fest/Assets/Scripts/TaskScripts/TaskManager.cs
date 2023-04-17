@@ -6,6 +6,7 @@ using TMPro;
 public class TaskManager : MonoBehaviour
 {
     public static bool initialized = false;
+    public static bool loadFromData = false;
     public static Dictionary<string, Task> cur_tasks;
     [SerializeField] private Task starting_task;
     [SerializeField] private TextMeshProUGUI task_display;
@@ -14,17 +15,33 @@ public class TaskManager : MonoBehaviour
     {
         if (!initialized)
         {
-            cur_tasks = new Dictionary<string, Task>();
-            this.AddTask(starting_task);
-            initialized = true;
+            if (loadFromData)
+            {
+                cur_tasks = new Dictionary<string, Task>();
+                List<Task> tasks = PersistentSaveData.GetListedTasks();
+                for (int i = 0; i < tasks.Count; i++)
+                {
+                    this.AddTask(tasks[i]);
+                }
+            }
+            else
+            {
+                cur_tasks = new Dictionary<string, Task>();
+                this.AddTask(starting_task);
+                initialized = true;
+            } 
         }
     }
 
     // adds a given task to our dictionary and then re-renders the list
     public void AddTask(Task t)
     {
-        cur_tasks.Add(t.objective, t);
-        this.RenderTasks();
+        if (!cur_tasks.ContainsValue(t))
+        {
+            cur_tasks.Add(t.objective, t);
+            this.RenderTasks();
+            UpdatePersistentData();
+        }
     }
 
     // goes through the list and correctly renders tasks
@@ -55,6 +72,7 @@ public class TaskManager : MonoBehaviour
     {
         cur_tasks.Clear();
         this.RenderTasks();
+        UpdatePersistentData();
     }
 
     // remove a given task object from the map of tasks
@@ -62,6 +80,7 @@ public class TaskManager : MonoBehaviour
     {
         cur_tasks.Remove(t.objective);
         this.RenderTasks();
+        UpdatePersistentData();
     }
 
     // mark a given task as completed by accessing it from the hashmap
@@ -69,6 +88,15 @@ public class TaskManager : MonoBehaviour
     {
         cur_tasks[t.objective].completed = true;
         this.RenderTasks();
+        UpdatePersistentData();
+    }
+
+    private void UpdatePersistentData()
+    {
+        if (GameObject.FindGameObjectWithTag("saveData") != null)
+        {
+            PersistentSaveData.UpdateTaskData();
+        }
     }
 
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialoguePlayOnStart : MonoBehaviour
 {
-    private static bool signingVisited = false;
+    public static bool signingVisited = false;
     public DialogueSO introDialogue;
 
     // Start is called before the first frame update
