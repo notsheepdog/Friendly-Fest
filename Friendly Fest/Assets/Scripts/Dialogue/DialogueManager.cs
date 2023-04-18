@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         this.sentences = new Queue<string>();
         this.tm = FindObjectOfType<TaskManager>();
@@ -44,9 +44,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueSO dialogue)
     {
-
         this.sentences.Clear();
-        this._textBox.SetActive(true);
         dialogueOn = true;
         foreach (var sentence in dialogue.Sentences)
         {
@@ -64,6 +62,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         this._name = dialogue.Name;
+
+        this._textBox.SetActive(true);
     }
 
     public void DisplayNextSentence()
